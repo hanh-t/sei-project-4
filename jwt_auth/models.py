@@ -7,3 +7,4 @@ class User(AbstractUser):
     profileImage = models.CharField(max_length=300, blank=True)
     points = models.PositiveIntegerField(blank=True, null=True)
     
+    
