@@ -2,11 +2,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Category
 from .serializers.common import CategorySerializer
 
 class CategoryListView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    
     def get(self, _request):
         categories = Category.objects.all() 
         serialized_categories = CategorySerializer(categories, many=True) 
