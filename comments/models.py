@@ -5,7 +5,7 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(
         "categories.Category",
-        related_name="categories",
+        related_name="comments",
         on_delete= models.CASCADE
     )
 
