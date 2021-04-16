@@ -1,0 +1,212 @@
+[
+{
+  "model": "resources.resource",
+  "pk": 2,
+  "fields": {
+    "resourceType": "Video",
+    "title": "Pointing and Calling Japanese Safety Standard",
+    "url": "https://www.youtube.com/watch?v=9LmdUz3rOQU",
+    "price": 20
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 3,
+  "fields": {
+    "resourceType": "Book",
+    "title": "The Creative Habit: Learn It and Use It for Life",
+    "url": "https://www.goodreads.com/book/show/254799.The_Creative_Habit",
+    "price": 45
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 4,
+  "fields": {
+    "resourceType": "Article",
+    "title": "Achieve Your Goals: Research Reveals a Simple Trick That Doubles Your Chances for Success",
+    "url": "https://jamesclear.com/implementation-intentions",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 5,
+  "fields": {
+    "resourceType": "Article",
+    "title": "How to Build New Habits by Taking Advantage of Old Ones",
+    "url": "https://jamesclear.com/habit-stacking",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 6,
+  "fields": {
+    "resourceType": "Article",
+    "title": "How to Stick With Good Habits Even When Your Willpower is Gone",
+    "url": "https://jamesclear.com/choice-architecture",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 7,
+  "fields": {
+    "resourceType": "Article",
+    "title": "How Science Is Unlocking the Secrets of Addiction",
+    "url": "https://www.nationalgeographic.com/magazine/article/the-addicted-brain",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 8,
+  "fields": {
+    "resourceType": "Article",
+    "title": "Motivation is Overvalued. Environment Often Matters More.",
+    "url": "https://jamesclear.com/power-of-environment",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 9,
+  "fields": {
+    "resourceType": "Article",
+    "title": "To Make Big Gains, Avoid Tiny Losses",
+    "url": "https://jamesclear.com/subtraction",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 10,
+  "fields": {
+    "resourceType": "Article",
+    "title": "How to Stop Procrastinating by Using the '2-Minute Rule'",
+    "url": "https://jamesclear.com/how-to-stop-procrastinating",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 11,
+  "fields": {
+    "resourceType": "Social Media",
+    "title": "One-time actions that pay off again and again",
+    "url": "https://twitter.com/JamesClear/status/962694722702790659",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 12,
+  "fields": {
+    "resourceType": "Article",
+    "title": "How to Stick With Good Habits Every Day by Using the 'Paper Clip Strategy'",
+    "url": " https://jamesclear.com/paper-clips",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 13,
+  "fields": {
+    "resourceType": "Article",
+    "title": "Keeping A Food Diary Doubles Diet Weight Loss, Study Suggests",
+    "url": "https://www.sciencedaily.com/releases/2008/07/080708080738.htm",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 14,
+  "fields": {
+    "resourceType": "Article",
+    "title": "Humans Wired to Respond to Short-Term Problems",
+    "url": "https://www.npr.org/templates/story/story.php?storyId=5530483&t=1618414947773",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 15,
+  "fields": {
+    "resourceType": "Book",
+    "title": "How They Succeeded: Life Stories of Successful Men Told By Themselves",
+    "url": "https://www.goodreads.com/book/show/7812750-how-they-succeeded",    
+    "price": 45
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 16,
+  "fields": {
+    "resourceType": "Book",
+    "title": "Meditations: A New Translation",
+    "url": "https://www.goodreads.com/book/show/56012495-meditations",    
+    "price": 40
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 17,
+  "fields": {
+    "resourceType": "Podcast",
+    "title": "Bill Ackman — The Knowledge Project #82",
+    "url": "https://www.youtube.com/watch?v=mIS3LYxgVWc",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 18,
+  "fields": {
+    "resourceType": "Book",
+    "title": "Tools of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers",
+    "url": "https://www.goodreads.com/book/show/31823677-tools-of-titans",    
+    "price": 45
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 19,
+  "fields": {
+    "resourceType": "Book",
+    "title": "Tribe of Mentors: Short Life Advice from the Best in the World",
+    "url": "https://www.goodreads.com/book/show/36200111-tribe-of-mentors",    
+    "price": 45
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 20,
+  "fields": {
+    "resourceType": "Book",
+    "title": "The Almanack of Naval Ravikant: A Guide to Wealth and Happiness",
+    "url": "https://www.goodreads.com/book/show/54898389-the-almanack-of-naval-ravikant",    
+    "price": 45
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 21,
+  "fields": {
+    "resourceType": "Video",
+    "title": "Ed Catmull, Pixar: Keep Your Crises Small",
+    "url": "https://www.youtube.com/watch?v=k2h2lvhzMDc",    
+    "price": 0
+  }
+},
+{
+  "model": "resources.resource",
+  "pk": 22,
+  "fields": {
+    "resourceType": "Book",
+    "title": "Mastery: The Keys to Success and Long-Term Fulfillment",
+    "url": "https://www.goodreads.com/book/show/81940.Mastery",    
+    "price": 45
+  }
+}
+]
