@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.exceptions import NotFound
+from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.permissions import IsAuthenticated
 
 from .models import Habit
@@ -16,6 +16,7 @@ class HabitListView(APIView):
         return Response(serialized_habits.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+        request.data["owner"] = request.user.id
         habit_to_add = HabitSerializer(data=request.data)
         if habit_to_add.is_valid():
             habit_to_add.save()
@@ -36,8 +37,10 @@ class HabitDetailView(APIView):
         serialized_habit = HabitSerializer(habit) 
         return Response(serialized_habit.data, status=status.HTTP_200_OK)
 
-    def delete(self, _request, pk):
+    def delete(self, request, pk):
         habit_to_delete = self.get_habit(pk=pk)
+        if habit_to_delete.owner != request.user:
+            raise PermissionDenied()
         habit_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 

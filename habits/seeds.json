@@ -1,0 +1,38 @@
+[
+{
+  "model": "habits.habit",
+  "pk": 2,
+  "fields": {
+    "title": "Practice yoga for 20mins",
+    "frequency": "daily",
+    "user": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 3,
+  "fields": {
+    "title": "Read 5 pages of new book",
+    "frequency": "daily",
+    "user": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 4,
+  "fields": {
+    "title": "Eat 2 pieces of fruit",
+    "frequency": "Daily",
+    "user": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 5,
+  "fields": {
+    "title": "Listen to one new podcast",
+    "frequency": "Once a week",
+    "user": 4
+  }
+}
+]

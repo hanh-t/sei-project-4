@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'jwt_auth',
     'categories',
     'habits',
-    'comments'
+    'comments',
+    'resources'
 ]
 
 MIDDLEWARE = [
