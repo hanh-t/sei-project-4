@@ -4,6 +4,7 @@ class Resource(models.Model):
     resourceType = models.CharField(max_length=50)
     title = models.CharField(max_length=400)
     url = models.CharField(max_length=400)
+    price = models.PositiveIntegerField(blank=True, null=True)
     # category = models.ForeignKey(
     #     "categories.Category",
     #     related_name="comments",
@@ -11,4 +12,4 @@ class Resource(models.Model):
     # )
 
     def __str__(self):
-        return f"{self.title} - {self.resourceType}"
+        return f"{self.title} - {self.resourceType} - {self.price} points"
