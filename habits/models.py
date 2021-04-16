@@ -8,6 +8,11 @@ class Habit(models.Model):
         related_name="habits",
         on_delete=models.CASCADE
     )
+    # category = models.ForeignKey(
+    #     "categories.Category",
+    #     related_name="categorys",
+    #     on_delete=models.PROTECT
+    # )
 
     def __str__(self):
         return f"{self.title}"

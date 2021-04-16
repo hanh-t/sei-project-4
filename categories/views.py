@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Category
 from .serializers.common import CategorySerializer
+# from .serializers.populated import PopulatedCategorySerializer
 
 class CategoryListView(APIView):
     permission_classes = (IsAuthenticatedOrReadOnly,)

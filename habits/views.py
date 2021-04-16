@@ -23,12 +23,18 @@ class HabitListView(APIView):
         return Response(habit_to_add.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 class HabitDetailView(APIView):
-    
+    permission_classes = (IsAuthenticated,)
+
     def get_habit(self, pk):
         try:
             return Habit.objects.get(pk=pk)
         except Habit.DoesNotExist:
             raise NotFound(detail="🚨 Cannot find that habit")
+    
+    def get(self, _request, pk):
+        habit = self.get_habit(pk=pk) 
+        serialized_habit = HabitSerializer(habit) 
+        return Response(serialized_habit.data, status=status.HTTP_200_OK)
 
     def delete(self, _request, pk):
         habit_to_delete = self.get_habit(pk=pk)
