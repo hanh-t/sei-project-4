@@ -1,7 +1,7 @@
-from comments.serializers.common import CommentSerializer
+from comments.serializers.populated import PopulatedCommentSerializer
 from ..serializers.common import CategorySerializer
 
 
 class PopulatedCategorySerializer(CategorySerializer):
 
-    comments = CommentSerializer(many=True)
+    comments = PopulatedCommentSerializer(many=True)
