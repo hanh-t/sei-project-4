@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { userID } from '../helpers/auth'
 
 const Navbar = () => {
 
@@ -16,7 +17,9 @@ const Navbar = () => {
       <Link to="/categories">
         Choose a category
       </Link>
-
+      <Link to={`/profile/${userID()}`}>
+        Profile
+      </Link>
     </>
   )
 }

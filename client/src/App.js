@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Register from './auth/Register'
 import Category from './components/Category'
 import HabitForm from './components/HabitForm'
+import UserProfile from './auth/UserProfile'
 // import MainTracker from './components/MainTracker'
 
 
@@ -19,6 +20,9 @@ const App = () => {
         </Route>
         <Route  path="/register">
           <Register />
+        </Route>
+        <Route  path="/profile/:id">
+          <UserProfile />
         </Route>
         <Route  path="/categories">
           <Category />
