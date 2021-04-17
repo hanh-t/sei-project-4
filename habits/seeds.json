@@ -4,8 +4,8 @@
   "pk": 2,
   "fields": {
     "title": "Practice yoga for at least 30mins",
-    "frequency": "daily",
-    "user": 3,
+    "frequency": "Daily",
+    "owner": 3,
     "category": 1
   }
 },
@@ -14,19 +14,19 @@
   "pk": 3,
   "fields": {
     "title": "Read 5 pages of new book",
-    "frequency": "daily",
-    "user": 3,
-    "category":
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 4
   }
 },
 {
   "model": "habits.habit",
   "pk": 4,
   "fields": {
-    "title": "Eat 2 pieces of fruit",
+    "title": "Eat at least 2 pieces of fruit",
     "frequency": "Daily",
-    "user": 3,
-    "category":
+    "owner": 3,
+    "category": 2
   }
 },
 {
@@ -35,48 +35,218 @@
   "fields": {
     "title": "Listen to one new podcast",
     "frequency": "Once a week",
-    "user": 3,
-    "category":
+    "owner": 3,
+    "category": 4
   }
 },
 {
   "model": "habits.habit",
   "pk": 6,
   "fields": {
-    "title": "",
-    "frequency": "",
-    "user": 3,
-    "category":
+    "title": "Walk for 20mins",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 1
   }
 },
 {
   "model": "habits.habit",
-  "pk": ,
+  "pk": 7,
   "fields": {
-    "title": "",
-    "frequency": "",
-    "user": 3,
-    "category":
+    "title": "Run 5km ",
+    "frequency": "Three times a week",
+    "owner": 3,
+    "category": 1
   }
 },
 {
   "model": "habits.habit",
-  "pk": ,
+  "pk": 8,
   "fields": {
-    "title": "",
-    "frequency": "",
-    "user": 3,
-    "category":
+    "title": "Stretch for at least 20mins",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 1
   }
 },
 {
   "model": "habits.habit",
-  "pk": ,
+  "pk": 9,
   "fields": {
-    "title": "",
-    "frequency": "",
-    "user": ,
-    "category":
+    "title": "Do 40 pushups",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 1
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 10,
+  "fields": {
+    "title": "Weightlifting sesh",
+    "frequency": "Four times a week",
+    "owner": 3,
+    "category": 1
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 11,
+  "fields": {
+    "title": "Practise handstands for 15mins",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 1
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 12,
+  "fields": {
+    "title": "Cook at home (meal prep)",
+    "frequency": "Five times a week",
+    "owner": 3,
+    "category": 2
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 13,
+  "fields": {
+    "title": "Choose vegetarian versions",
+    "frequency": "Three times a week",
+    "owner": 3,
+    "category": 2
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 14,
+  "fields": {
+    "title": "Don’t bite nails",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 3
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 15,
+  "fields": {
+    "title": "Call parents and grandparents",
+    "frequency": "Twice a week",
+    "owner": 3,
+    "category": 3
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 16,
+  "fields": {
+    "title": "No smoking",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 3
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 17,
+  "fields": {
+    "title": "Read before bed, no tech, for at least 20mins",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 3
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 18,
+  "fields": {
+    "title": "Wake up when alarm goes off - no snoozing",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 3
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 19,
+  "fields": {
+    "title": "Sleep for at least 6 hours ",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 3
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 20,
+  "fields": {
+    "title": "Practise guitar 15mins",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 21,
+  "fields": {
+    "title": "Complete most important tasks first",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 22,
+  "fields": {
+    "title": "Be on time to all work meetings and appointments",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 23,
+  "fields": {
+    "title": "Watch one TED talk, or other inspiring video, to keep me motivated",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 4
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 24,
+  "fields": {
+    "title": "Meditate for 10mins",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 5
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 25,
+  "fields": {
+    "title": "Meditate for 5mins",
+    "frequency": "Daily",
+    "owner": 4,
+    "category": 5
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 26,
+  "fields": {
+    "title": "Spend at least 20mins outside getting fresh air and vitamin D",
+    "frequency": "Daily",
+    "owner": 3,
+    "category": 5
   }
 }
 ]

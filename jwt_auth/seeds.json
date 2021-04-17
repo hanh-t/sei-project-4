@@ -1,0 +1,86 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$16CfGRBdhneZzbdQVDWlE4$a9YkuQFDqMSCMOASqQmJKuaH1jCW+puASWkLrb4tTms=",
+    "last_login": "2021-04-16T07:56:13.165Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-15T16:21:21.469Z",
+    "fullName": "",
+    "email": "admin@email.com",
+    "profileImage": "",
+    "points": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$CmnrgYZoWwy4TAfNXfidxx$Z1n8FTQAkOfxiAl1HFCYpXcp1uuEKbgUOT5fX/TC0Po=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jasp",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-15T18:08:33.953Z",
+    "fullName": "Jasper Smith",
+    "email": "jasper@email.com",
+    "profileImage": "image.png",
+    "points": 0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$2OBcQPf0NlHnstckH7X4z3$icsdxMzLh5xcRVDwLUSmt3amouvTB5bFExukbXrPF3k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Loz",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-16T10:52:24.369Z",
+    "fullName": "Laurel Smith",
+    "email": "laurel@email.com",
+    "profileImage": "",
+    "points": 0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$hnr3n7JqI5pcDqexVhgiVr$Kjmx8MrY6zMhQup3OpXZ0Jzvoe+p32AfOJWjR74Ir7Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Joe",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-04-16T14:46:46.017Z",
+    "fullName": "Joe Bloggs",
+    "email": "joeb@email.com",
+    "profileImage": "",
+    "points": 0,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
