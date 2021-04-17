@@ -1,15 +1,8 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
+
 
 
 const Home = () => {
-  useEffect(() => {
-    const getData = async() => {
-      const response = await axios.get('api/categories')
-      console.log('RESPONSE', response)
-    }
-    getData()
-  }, [])
 
   return (
     <h1>HOMEPAGE</h1>

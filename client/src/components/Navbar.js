@@ -30,7 +30,7 @@ const Navbar = () => {
         Choose a category
       </Link>
       { userIsAuthenticated() &&
-      <Link to={`/profile/${userID()}`}>
+      <Link to={`auth/profile/${userID()}`}>
         Profile
       </Link>
       }
