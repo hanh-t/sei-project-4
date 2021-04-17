@@ -15,3 +15,10 @@ export const userID = () => {
   if ( !payload ) return false
   return payload.sub
 }
+
+export const userIsAuthenticated = () => {
+  const payload = getPayloadFromToken()
+  if ( !payload ) return false
+  const now = Math.round(Date.now() / 1000)
+  return now < payload.exp
+}
