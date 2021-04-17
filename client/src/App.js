@@ -5,6 +5,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Register from './auth/Register'
 import Category from './components/Category'
+import HabitForm from './components/HabitForm'
+// import MainTracker from './components/MainTracker'
 
 
 const App = () => {
@@ -21,6 +23,12 @@ const App = () => {
         <Route  path="/categories">
           <Category />
         </Route>
+        <Route  path="/habits">
+          <HabitForm />
+        </Route>
+        {/* <Route  path="/habits">
+          <HabitForm />
+        </Route> */}
       </Switch>
       <Footer />
     </BrowserRouter>
