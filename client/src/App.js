@@ -1,17 +1,30 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Register from './auth/Register'
+import Category from './components/Category'
 
 
 const App = () => {
-  useEffect(() => {
-    const getData = async() => {
-      const response = await axios.get('api/categories')
-      console.log('RESPONSE', response)
-    }
-    getData()
-  }, [])
-
-  return <h1>Hello World</h1>
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route  path="/register">
+          <Register />
+        </Route>
+        <Route  path="/categories">
+          <Category />
+        </Route>
+      </Switch>
+      <Footer />
+    </BrowserRouter>
+  )
 }
 
 export default App
