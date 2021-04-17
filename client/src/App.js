@@ -7,6 +7,7 @@ import Register from './auth/Register'
 import Category from './components/Category'
 import HabitForm from './components/HabitForm'
 import UserProfile from './auth/UserProfile'
+import Login from './auth/Login'
 // import MainTracker from './components/MainTracker'
 
 
@@ -18,8 +19,11 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route  path="/register">
+        <Route  path="/auth/register">
           <Register />
+        </Route>
+        <Route  path="/auth/login">
+          <Login />
         </Route>
         <Route  path="/profile/:id">
           <UserProfile />

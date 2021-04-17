@@ -10,9 +10,13 @@ const Navbar = () => {
       <Link to="/">
         Home
       </Link>
-      <Link to='/login'>
+      <Link to='/auth/login'>
         {/* <i className="sign in alternate icon"></i> */}
-        Login / Register
+        Login
+      </Link>
+      <Link to='/auth/register'>
+        {/* <i className="sign in alternate icon"></i> */}
+        Register
       </Link>
       <Link to="/categories">
         Choose a category
