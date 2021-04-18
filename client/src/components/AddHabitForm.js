@@ -1,16 +1,30 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 
 const HabitForm = () => {
   const history = useHistory()
+  const params = useParams()
+  
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    const getData = async() => {
+      const { data } = await axios.get(`/api/categories/${params.id}`)
+      setCategories(data)
+    }
+    getData()
+  }, [])
+
+  console.log('CATEGORY>>', categories)
 
   const [formData, setFormData] = useState({
+    category: '',
     title: '',
     frequency: '',
   })
-
+  console.log('FORM DATA', formData)
   const handleChange = event => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
     setFormData(newFormData)
@@ -20,19 +34,31 @@ const HabitForm = () => {
     event.preventDefault()
     
     await axios.post(
-      '/api/habits',
+      '/api/habits/',
       formData,
       {
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
       }
     )
-    history.push('/habits')
+    history.push('/habits/')
     window.location.reload()
   }
+  const { id, title } = categories
 
   return (
     <div>
+
       <form onSubmit={handleSubmit}>
+        <div>
+          <label>Category</label>
+          <textarea
+            className="input"
+            placeholder="Category"
+            name="category"
+            value={id, title}
+            onChange={handleChange}
+          />
+        </div>
         <div>
           <label>What is your new habit?</label>
           <textarea
@@ -45,9 +71,10 @@ const HabitForm = () => {
         </div>
         <div>
           <label>How often will you do it?</label>
-          <input
-            placeholder="Daily"
-            name="text"
+          <textarea
+            className="input"
+            placeholder="Daily..."
+            name="frequency"
             value={formData.frequency}
             onChange={handleChange}
           />

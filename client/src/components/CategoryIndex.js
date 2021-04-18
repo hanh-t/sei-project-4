@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 // import HabitForm from './HabitForm'
-import { Link } from 'react-router-dom'
+import CategoryCard from './CategoryCard'
 
 const Category = () => {
   const [categories, setCategories] = useState([])
@@ -17,15 +17,9 @@ const Category = () => {
 
   return (
     <>
-      {categories.map((category, i) => ( 
-        <div className="category-container" key={i}>
-          <Link to="/habits">
-            <div className="single-category">
-              <h1 key={category.id}>{category.id} - {category.title}</h1>
-            </div>
-            {/* <HabitForm /> */}
-          </Link>
-        </div>
+      <h1>category list</h1>
+      { categories.map( category => (
+        <CategoryCard key={category.id} {...category} />
       ))}
     </>
   )

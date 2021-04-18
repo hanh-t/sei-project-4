@@ -42,8 +42,8 @@ const EditUserForm = ({ handleChange, handleImageUrl, handleSubmit, formData }) 
             <div className="field">
               <label>Profile Picture</label>
               <ImageUploadField
-                name="profilePic"
-                value={formData.profilePic}
+                name="profileImage"
+                value={formData.profileImage}
                 handleImageUrl={handleImageUrl}
               />
             </div>

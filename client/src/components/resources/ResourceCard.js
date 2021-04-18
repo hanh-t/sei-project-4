@@ -5,10 +5,11 @@ const ResourceCard = ({ id, resourceType, title, url }) => {
 
   return (
     <div>
-      <Link to={`/resources/${id}`}>
+      <Link to={`/resources/${id}/`}>
         <h3>{title}</h3>
         <h5>{url}</h5>
         <h5>{resourceType}</h5>
+        {/* <h5>{price} points</h5> */}
       </Link>
     </div>
   )
