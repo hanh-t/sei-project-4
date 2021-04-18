@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import HabitForm from './HabitForm'
 import CategoryCard from './CategoryCard'
 
 const Category = () => {

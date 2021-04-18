@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { userID } from '../helpers/auth'
+import { userID } from '../../helpers/auth'
 import HabitCard from './HabitCard'
+import { Link } from 'react-router-dom'
 
 
 const MainTracker = () => {
@@ -15,19 +16,21 @@ const MainTracker = () => {
     getData()
   }, [])
 
-  console.log('HABITS>>', habits)
-
   const filteredArray = habits.filter(habit => {
     return habit.owner === userID()
   })
 
-  console.log('FILTERED>>>', filteredArray)
 
   return (
     <>
       { filteredArray.map(habit => (
         <HabitCard key={habit.id} {...habit}/>
       ))}
+      <Link to="/categories">
+        <button>Add another habit to track</button>
+      </Link>
+      {/* <Link to="" */}
+
     </>
   )
 }

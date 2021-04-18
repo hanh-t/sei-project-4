@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
-import { getTokenFromLocalStorage } from '../helpers/auth'
+import { getTokenFromLocalStorage } from '../../helpers/auth'
 
 const HabitForm = () => {
   const history = useHistory()

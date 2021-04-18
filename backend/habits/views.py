@@ -24,7 +24,7 @@ class HabitListView(APIView):
         return Response(habit_to_add.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 class HabitDetailView(APIView):
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def get_habit(self, pk):
         try:
