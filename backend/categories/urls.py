@@ -5,5 +5,6 @@ from habits.views import HabitListView
 urlpatterns = [
     path('', CategoryListView.as_view()),
     path('<int:pk>/', CategoryDetailView.as_view()),
-    path('<int:pk>/habits/', HabitListView.as_view())
+    path('<int:pk>/habits/', HabitListView.as_view()),
+    path('community/', CategoryListView.as_view())
 ]

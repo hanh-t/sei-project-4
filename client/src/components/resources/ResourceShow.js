@@ -9,12 +9,12 @@ const ResourceShow = () => {
 
   useEffect(() => {
     const getData = async() => {
-      const { data } = await axios.get(`api/resources/${params.id}/`)
+      const { data } = await axios.get(`/api/resources/${params.id}/`)
       setResources(data)
     }
     getData()
   }, [])
-
+  
   if (!resources) return null
 
   // const { }
@@ -22,7 +22,10 @@ const ResourceShow = () => {
   return (
     <>
       <h1>More details</h1>
-
+      <p>{resources.title}</p>
+      <p>How to view: {resources.url}</p>
+      <p>Cost: {resources.price} points</p>
+      <button>Save for later</button>
     </>
   )
 }

@@ -42,6 +42,10 @@ const Navbar = () => {
         <Link to={`auth/profile/${userID()}`}>
         Profile
         </Link>
+
+        <Link to="/categories/community">
+          Community
+        </Link>
       </>
       }
       { userIsAuthenticated() &&

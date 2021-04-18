@@ -13,6 +13,7 @@ import ResourceIndex from './components/resources/ResourceIndex'
 import ResourceShow from './components/resources/ResourceShow'
 import AddHabitForm from './components/habits/AddHabitForm'
 import EditHabit from './components/habits/EditHabit'
+import Forum from './components/Forum'
 
 
 const App = () => {
@@ -35,16 +36,21 @@ const App = () => {
         <Route  exact path="/auth/profile/:id/edit">
           <EditUserProfile />
         </Route>
+        <Route exact path="/categories/community">
+          <Forum />
+        </Route>
         <Route  exact path="/categories">
           <CategoryIndex />
         </Route>
+        
         <Route exact path="/categories/:id">
           <AddHabitForm />
         </Route>
+        
         <Route  exact path="/habits">
           <MainTracker />
         </Route>
-        <Route  path="/habits/:id">
+        <Route  exact path="/habits/:id">
           <EditHabit />
         </Route>
         <Route  exact path="/resources">

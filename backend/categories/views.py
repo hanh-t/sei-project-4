@@ -9,7 +9,7 @@ from .serializers.common import CategorySerializer
 from .serializers.populated import PopulatedCategorySerializer
 
 class CategoryListView(APIView):
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    # permission_classes = (IsAuthenticatedOrReadOnly,)
     
     def get(self, _request):
         categories = Category.objects.all() 
