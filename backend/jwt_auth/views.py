@@ -45,6 +45,8 @@ class LoginView(APIView):
 
         return Response({ 'token': token, 'message': f'Welcome back {user_to_login.username}!'})
 
+# Show a user's profile
+
 class UserDetailView(APIView):
     def get_user(self, pk):
         try:

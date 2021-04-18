@@ -5,11 +5,10 @@ import axios from 'axios'
 const UserProfile = () => {
   const [userData, setUserData] = useState('')
   const params = useParams()
-  console.log('PARAMS', params)
 
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get(`api/auth/profile/${params.id}/`)
+    const getData = async() => {
+      const { data } = await axios.get(`/api/auth/profile/${params.id}`)
       setUserData(data)
     }
     getData()
@@ -17,7 +16,7 @@ const UserProfile = () => {
 
   console.log('USER>>>', userData)
 
-  const { username } = userData.data
+  const { username } = userData
   // fullName, username, email, profileImage, points 
 
   if (!userData) return null
