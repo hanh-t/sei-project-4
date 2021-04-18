@@ -16,16 +16,20 @@ const Navbar = () => {
       <Link to="/">
         Home
       </Link>
+     
       { !userIsAuthenticated() && 
-      <Link to='/auth/login'>
-        {/* <i className="sign in alternate icon"></i> */}
+       <>
+         <Link to='/auth/register'>
+           {/* <i className="sign in alternate icon"></i> */}
+      Register
+         </Link>
+         <Link to='/auth/login'>
+           {/* <i className="sign in alternate icon"></i> */}
         Login
-      </Link>
+         </Link>
+       </>
       }
-      <Link to='/auth/register'>
-        {/* <i className="sign in alternate icon"></i> */}
-        Register
-      </Link>
+
       <Link to="/categories">
         Choose a category
       </Link>
