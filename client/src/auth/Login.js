@@ -24,7 +24,7 @@ const Login = () => {
     try {
       const response = await axios.post('/api/auth/login/', formData)
       window.localStorage.setItem('token', response.data.token)
-      history.push('/')
+      history.push('/habits/')
       location.reload()
     } catch (err) {
       setErrors('Unauthorised')

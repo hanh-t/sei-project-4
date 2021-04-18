@@ -35,7 +35,7 @@ const Register = () => {
     console.log(event.target.value)
     setFormData(newFormData)
   }
-  console.log('FORM>>', formData)
+ 
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {

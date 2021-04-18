@@ -18,28 +18,31 @@ const Navbar = () => {
       </Link>
      
       { !userIsAuthenticated() && 
-       <>
-         <Link to='/auth/register'>
-           {/* <i className="sign in alternate icon"></i> */}
+      <>
+        <Link to='/auth/register'>
+          {/* <i className="sign in alternate icon"></i> */}
       Register
-         </Link>
-         <Link to='/auth/login'>
-           {/* <i className="sign in alternate icon"></i> */}
+        </Link>
+        <Link to='/auth/login'>
+          {/* <i className="sign in alternate icon"></i> */}
         Login
-         </Link>
-       </>
+        </Link>
+      </>
       }
-
-      <Link to="/categories">
-        Choose a category
-      </Link>
       <Link to="/resources">
         Resources
       </Link>
+      
       { userIsAuthenticated() &&
-      <Link to={`auth/profile/${userID()}`}>
+      <>
+        <Link to="/categories">
+        Choose a category
+        </Link>
+  
+        <Link to={`auth/profile/${userID()}`}>
         Profile
-      </Link>
+        </Link>
+      </>
       }
       { userIsAuthenticated() &&
         

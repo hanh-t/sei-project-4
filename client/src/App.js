@@ -5,11 +5,10 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Register from './auth/Register'
 import CategoryIndex from './components/CategoryIndex'
-// import HabitForm from './components/HabitForm'
 import UserProfile from './auth/UserProfile'
 import Login from './auth/Login'
 import EditUserProfile from './auth/EditUserProfile'
-// import MainTracker from './components/MainTracker'
+import MainTracker from './components/MainTracker'
 import ResourceIndex from './components/resources/ResourceIndex'
 import ResourceShow from './components/resources/ResourceShow'
 import AddHabitForm from './components/AddHabitForm'
@@ -41,9 +40,9 @@ const App = () => {
         <Route exact path="/categories/:id">
           <AddHabitForm />
         </Route>
-        {/* <Route  path="/habits">
-          <HabitForm />
-        </Route> */}
+        <Route  path="/habits">
+          <MainTracker />
+        </Route>
         <Route  exact path="/resources">
           <ResourceIndex />
         </Route>

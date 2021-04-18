@@ -13,8 +13,6 @@ const Resources = () => {
     getData()
   }, [])
 
-  console.log('RESOURCE>>', resources)
-
   if (!resources) return ''
   return (
     <>

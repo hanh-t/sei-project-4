@@ -10,6 +10,12 @@ export const getPayloadFromToken = () => {
   return JSON.parse(atob(parts[1]))
 }
 
+export const userIsOwner = userId => {
+  const payload = getPayloadFromToken()
+  if ( !payload ) return false
+  return userId === payload.sub
+}
+
 export const userID = () => {
   const payload = getPayloadFromToken()
   if ( !payload ) return false

@@ -8,7 +8,7 @@ from .models import Habit
 from .serializers.common import HabitSerializer
 
 class HabitListView(APIView):
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def get(self, _request):
         habits = Habit.objects.all()	 

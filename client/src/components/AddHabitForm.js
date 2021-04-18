@@ -1,30 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 
 const HabitForm = () => {
   const history = useHistory()
-  const params = useParams()
-  
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    const getData = async() => {
-      const { data } = await axios.get(`/api/categories/${params.id}`)
-      setCategories(data)
-    }
-    getData()
-  }, [])
-
-  console.log('CATEGORY>>', categories)
+  const params = useParams()  
 
   const [formData, setFormData] = useState({
     category: `${params.id}`,
     title: '',
     frequency: '',
   })
-  console.log('FORM DATA', formData)
+  
   const handleChange = event => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
     setFormData(newFormData)
