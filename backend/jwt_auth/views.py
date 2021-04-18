@@ -59,3 +59,13 @@ class UserDetailView(APIView):
         user = self.get_user(pk=pk)
         serialized_user = UserSerializer(user)
         return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+#  Edit a user's profile
+
+    def put(self, request, pk):
+        user_to_edit = self.get_user(pk=pk)
+        updated_user = UserSerializer(user_to_edit, data=request.data)
+        if updated_user.is_valid():
+            updated_user.save()
+            return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
+        return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)

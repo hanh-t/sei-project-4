@@ -8,6 +8,7 @@ import Category from './components/Category'
 import HabitForm from './components/HabitForm'
 import UserProfile from './auth/UserProfile'
 import Login from './auth/Login'
+import EditUserProfile from './auth/EditUserProfile'
 // import MainTracker from './components/MainTracker'
 
 
@@ -27,6 +28,9 @@ const App = () => {
         </Route>
         <Route  exact path="/auth/profile/:id">
           <UserProfile />
+        </Route>
+        <Route  exact path="/auth/profile/:id/edit">
+          <EditUserProfile />
         </Route>
         <Route  path="/categories">
           <Category />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const UserProfile = () => {
@@ -14,15 +14,20 @@ const UserProfile = () => {
     getData()
   }, [])
 
-  console.log('USER>>>', userData)
-
-  const { username } = userData
-  // fullName, username, email, profileImage, points 
+  const { username, fullName, email, profileImage, points  } = userData
+  
 
   if (!userData) return null
   return (
     <>
-      <h1 className="profile-title">{`Welcome back ${username}!`}</h1>
+      <h1>{`Welcome back ${username}!`}</h1>
+      <h2>Full Name: {fullName}</h2>
+      <h2>Email: {email}</h2>
+      <h2>Profile Image: {profileImage}</h2>
+      <h2>Total points: {points}</h2>
+      <Link to={`/auth/profile/${params.id}/edit`}>
+        <button>Edit profile</button>
+      </Link>
     </>
   )
 }
