@@ -20,7 +20,7 @@ const HabitForm = () => {
   console.log('CATEGORY>>', categories)
 
   const [formData, setFormData] = useState({
-    category: '',
+    category: `${params.id}`,
     title: '',
     frequency: '',
   })
@@ -43,7 +43,7 @@ const HabitForm = () => {
     history.push('/habits/')
     window.location.reload()
   }
-  const { id, title } = categories
+ 
 
   return (
     <div>
@@ -55,7 +55,7 @@ const HabitForm = () => {
             className="input"
             placeholder="Category"
             name="category"
-            value={id, title}
+            value={formData.category}
             onChange={handleChange}
           />
         </div>
