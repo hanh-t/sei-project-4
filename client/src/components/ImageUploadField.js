@@ -16,8 +16,6 @@ export const ImageUploadField = ({ handleImageUrl, value }) => {
     handleImageUrl(response.data.url)
   }
   
-
-  console.log('VALUE>>>>>>>',value)
   return (
     <>
       {value ?

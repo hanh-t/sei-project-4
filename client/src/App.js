@@ -10,6 +10,7 @@ import UserProfile from './auth/UserProfile'
 import Login from './auth/Login'
 import EditUserProfile from './auth/EditUserProfile'
 // import MainTracker from './components/MainTracker'
+import ResourceIndex from './components/resources/ResourceIndex'
 
 
 const App = () => {
@@ -38,9 +39,9 @@ const App = () => {
         <Route  path="/habits">
           <HabitForm />
         </Route>
-        {/* <Route  path="/habits">
-          <HabitForm />
-        </Route> */}
+        <Route  path="/resources">
+          <ResourceIndex />
+        </Route>
       </Switch>
       <Footer />
     </BrowserRouter>

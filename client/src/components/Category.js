@@ -21,7 +21,7 @@ const Category = () => {
         <div className="category-container" key={i}>
           <Link to="/habits">
             <div className="single-category">
-              <h1 key={category.id}>{category.title}</h1>
+              <h1 key={category.id}>{category.id} - {category.title}</h1>
             </div>
             {/* <HabitForm /> */}
           </Link>

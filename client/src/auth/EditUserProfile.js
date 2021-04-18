@@ -37,7 +37,6 @@ const EditUserProfile = () => {
     }
     getData()
   }, [])
-  console.log('DATA>>>', formData)
 
   const handleImageUrl = url =>{
     setFormData({ ...formData, profilePic: url })

@@ -33,6 +33,9 @@ const Navbar = () => {
       <Link to="/categories">
         Choose a category
       </Link>
+      <Link to="/resources">
+        Resources
+      </Link>
       { userIsAuthenticated() &&
       <Link to={`auth/profile/${userID()}`}>
         Profile
