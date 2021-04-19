@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 const MainTracker = () => {
   const [habits, setHabits] = useState([])
+  const [quote, setQuote] = useState(null)
 
   useEffect(() => {
     const getData = async() => {
@@ -16,10 +17,31 @@ const MainTracker = () => {
     getData()
   }, [])
 
+  useEffect(() =>{
+    const getData = async() => {
+      const response = await axios.get('api/quotes/')
+      setQuote(response.data)
+      
+    }
+    getData()
+  }, [])
+
+  if (!quote) return ''
+
+  console.log('QUOTES', quote)
+
   const filteredArray = habits.filter(habit => {
     return habit.owner === userID()
   })
 
+  const mappedQuotes = quote.map(item => {
+    return item.text
+  })
+
+  // console.log(mappedQuotes)
+
+  const randomQuote = mappedQuotes[Math.floor(Math.random() * mappedQuotes.length)]
+  console.log('RANDOM QUOTE', randomQuote)
 
   return (
     <>
@@ -30,7 +52,7 @@ const MainTracker = () => {
       <Link to="/categories">
         <button>Add another habit to track</button>
       </Link>
-      {/* <Link to="" */}
+      
 
     </>
   )
