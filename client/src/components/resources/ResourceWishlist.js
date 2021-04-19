@@ -21,7 +21,7 @@ const ResourceWishlist = ({ userData }) => {
 
   return (
     <div>
-      <button className="ui basic blue button" onClick={ handleWishlist} value="Added to your wishlist!">Add to wishlist</button>
+      <button className="ui basic blue button" onClick={ handleWishlist} value="Added to your wishlist!">Save for later</button>
     </div>
   )
 }

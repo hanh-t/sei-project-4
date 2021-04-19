@@ -31,7 +31,7 @@ const ResourceShow = ({ userData }) => {
         userData = {userData}
         resource = {resource}
       />
-      <button>Save for later</button>
+      
     </>
   )
 }

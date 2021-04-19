@@ -2,7 +2,7 @@ import React from 'react'
 import { ImageUploadField } from '../components/ImageUploadField'
 
 const EditUserForm = ({ handleChange, handleImageUrl, handleSubmit, formData }) => {
-
+ 
   return (
 
 

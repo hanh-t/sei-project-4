@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { userID, getTokenFromLocalStorage } from '../../helpers/auth'
+import { getTokenFromLocalStorage } from '../../helpers/auth'
 import EditHabitForm from './EditHabitForm'
 import { useParams, useHistory } from 'react-router-dom'
 
 const EditHabit = () => {
-  const [habits, setHabits] = useState([])
 
   const history = useHistory()
   const params = useParams()
-  console.log('PARAMS', params)
+  
 
   const [formData, setFormData] = useState({
     title: '',
@@ -19,27 +18,23 @@ const EditHabit = () => {
 
   useEffect(() => {
     const getData = async() => {
-      const { data } = await axios.get('/api/habits/')
-      setHabits(data)
+      const { data } = await axios.get(`/api/habits/${params.id}`)
+      setFormData(data)
     }
     getData()
   }, [])
+ 
 
-  const filteredArray = habits.filter(habit => {
-    return habit.owner === userID()
-  })
-
-  const handleChange = event => {
+  const handleChange = (event) => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
-    
     setFormData(newFormData)
-    console.log(event.target)
+    // console.log(event.target)
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     await axios.put(
-      `/api/habits/${params.id}`,
+      `/api/habits/${params.id}/`,
       formData,
       {
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
@@ -54,23 +49,19 @@ const EditHabit = () => {
         Authorization: `Bearer ${getTokenFromLocalStorage()}`,
       },
     })
-    history.push(`/parks/${params.id}`)
+    history.push('/habits/')
   }
 
   if (!formData) return ''
 
   return (
     <>
-      { filteredArray.map(habit => (
-        <>
-          <EditHabitForm 
-            {...habit}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            formData={formData}
-          />
-        </>
-      ))} 
+    
+      <EditHabitForm 
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        formData={formData}
+      />
       <button onClick={handleDelete}>Delete this habit</button>
 
     </>
