@@ -18,9 +18,11 @@ const Resources = () => {
     <>
       <h1>RESOURCES LIST</h1>
       <h2>Here is a list of resources that we love and know will be useful for you. We have a small selection of books that you can purchase from us with your points. If you have not yet signed up, what are you waiting for? Your future habits will thank you!</h2>
-      {resources.map(resource => ( 
-        <ResourceCard key={resource.id} {...resource} />
-      ))}
+      <div className="resource-card-container">
+        {resources.map(resource => ( 
+          <ResourceCard key={resource.id} {...resource} />
+        ))}
+      </div>
     </>
   )
 }

@@ -5,8 +5,12 @@
 
 h1 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
+h2 {
+  text-align: center;
+}
 
 
 // navbar
@@ -14,6 +18,27 @@ h1 {
   margin-bottom: 0px !important;
   border-radius: 0px !important;
 }
+
+
+// resources
+
+.resource-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.resource-card-container a {
+  margin: 10px;
+}
+
+.ui.card {
+  height: 140px;
+}
+
+
 
 // category list
 .category-container {
