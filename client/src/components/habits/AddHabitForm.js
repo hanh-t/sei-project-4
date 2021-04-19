@@ -31,6 +31,11 @@ const HabitForm = () => {
     history.push('/habits/')
     window.location.reload()
   }
+
+  const handleCancel = () => {
+    history.push('/habits/')
+    window.location.reload()
+  }
  
 
   return (
@@ -71,6 +76,7 @@ const HabitForm = () => {
           Submit
         </button>
       </form>
+      <button onClick={handleCancel}>Cancel</button>
     </div>
   )
 }
