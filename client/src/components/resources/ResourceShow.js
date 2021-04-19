@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import ResourceWishlist from './ResourceWishlist'
 
-const ResourceShow = () => {
+const ResourceShow = ({ userData }) => {
   const params = useParams()
 
-  const [resources, setResources] = useState([])
+  const [resource, setResource] = useState(null)
 
   useEffect(() => {
     const getData = async() => {
       const { data } = await axios.get(`/api/resources/${params.id}/`)
-      setResources(data)
+      setResource(data)
     }
     getData()
   }, [])
   
-  if (!resources) return null
+  if (!resource) return ''
 
   // const { }
 
   return (
     <>
       <h1>More details</h1>
-      <p>{resources.title}</p>
-      <p>How to view: {resources.url}</p>
-      <p>Cost: {resources.price} points</p>
+      <p>{resource.title}</p>
+      <p>How to view: {resource.url}</p>
+      <p>Cost: {resource.price} points</p>
+
+      <ResourceWishlist 
+        userData = {userData}
+        resource = {resource}
+      />
       <button>Save for later</button>
     </>
   )

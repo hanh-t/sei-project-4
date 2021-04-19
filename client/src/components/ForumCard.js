@@ -1,15 +1,12 @@
 import React from 'react'
 
-const ForumCard = ({ title }) => {
-
+const ForumCard = ({ title, comments }) => {
+  console.log('COMMENTS', comments)
 
   return (
     <div>
-      <h1>Forum Card</h1>
-      <h2>{title}</h2>
-      {/* { comments.map( comment => (
-        <h3 key={comment.id} >{comment}</h3>
-      ))} */}
+      <h2>{title} Forum</h2>
+      {/* <p>{comments}</p> */}
     </div>
   )
 }

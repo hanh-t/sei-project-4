@@ -10,7 +10,8 @@ import Login from './auth/Login'
 import EditUserProfile from './auth/EditUserProfile'
 import MainTracker from './components/habits/MainTracker'
 import ResourceIndex from './components/resources/ResourceIndex'
-import ResourceShow from './components/resources/ResourceShow'
+// import ResourceShow from './components/resources/ResourceShow'
+import UserData from './components/resources/UserData'
 import AddHabitForm from './components/habits/AddHabitForm'
 import EditHabit from './components/habits/EditHabit'
 import Forum from './components/Forum'
@@ -57,7 +58,7 @@ const App = () => {
           <ResourceIndex />
         </Route>
         <Route  path="/resources/:id">
-          <ResourceShow />
+          <UserData />
         </Route>
       </Switch>
       <Footer />

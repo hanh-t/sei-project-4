@@ -13,15 +13,14 @@ const Forum = () => {
     getData()
   }, [])
 
-  console.log('CATS', categories)
 
   
   
   return (
     <>
       <h1>Join the community!</h1>
-      { categories.map( category => (
-        <ForumCard key={category.[0]} {...category } />
+      { categories.map((category, i) => (
+        <ForumCard key={i} {...category } />
       ))}
     </>
   )
