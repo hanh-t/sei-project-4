@@ -1,21 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
-const ResourceWishlist = ({ userData }) => {
+const ResourceWishlist = ({ userData, resource }) => {
   console.log('USER', userData)
   if (!userData) return ''  
 
-  // const [wishlist] =  useState({
-  //   wishList: [...userData.wishlist, resource.id],
-  // })
+  const [wishlist] =  useState({
+    wishList: [...userData.wishlist, resource.id],
+  })
 
 
-  // if (!wishlist) return ''
+  if (!wishlist) return ''
+
+  console.log('WISHLIST', wishlist)
 
   const handleWishlist = async () =>{
     await axios.put(
-      `/api/auth/profile/${userData.id}`
-      // wishlist
+      `/api/auth/profile/${userData.id}/`,
+      wishlist
     )
   }
 

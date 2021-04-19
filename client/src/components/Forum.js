@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ForumCard from './ForumCard'
-import { useParams } from 'react-router-dom'
+
 
 
 const Forum = () => {
   const [categories, setCategories] = useState([])
-  const params = useParams()
-  console.log(params)
+ 
   
   useEffect(() => {
     const getData = async() => {
@@ -16,7 +15,7 @@ const Forum = () => {
     }
     getData()
   }, [])
-  console.log('CAT', categories)
+  
   
   return (
     <>

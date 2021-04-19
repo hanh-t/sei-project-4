@@ -3,7 +3,7 @@
   "model": "comments.comment",
   "pk": 1,
   "fields": {
-    "text": "Have made it through the whole week!",
+    "text": "Have made it through the whole week doing my 10,000 steps a day!",
     "created_at": "2021-04-16T08:00:25.966Z",
     "category": 1,
     "owner": 4
@@ -43,7 +43,7 @@
   "model": "comments.comment",
   "pk": 5,
   "fields": {
-    "text": "I feel so different meditating every day! My 10mins is perfect. On to week 3...",
+    "text": "I feel so different meditating every day! My 10mins is perfect. On to week 4...",
     "created_at": "2021-04-16T10:01:38.694Z",
     "category": 5,
     "owner": 4
@@ -53,7 +53,7 @@
   "model": "comments.comment",
   "pk": 8,
   "fields": {
-    "text": "Lizzie, the grid instructor, is fab at motivating us with different exercises. Try out her classes!",
+    "text": "Lizzie, the grid instructor, is great at motivating us with different exercises. Try out her classes!",
     "created_at": "2021-04-16T11:08:33.680Z",
     "category": 1,
     "owner": 4
@@ -63,9 +63,19 @@
   "model": "comments.comment",
   "pk": 9,
   "fields": {
-    "text": "Headspace app is highly recommended, it's working for me",
+    "text": "The Headspace app is highly recommended, it's working for me",
     "created_at": "2021-04-16T14:19:45.841Z",
     "category": 5,
+    "owner": 4
+  }
+},
+{
+  "model": "comments.comment",
+  "pk": 10,
+  "fields": {
+    "text": "The 10mins TED talks every day have been a good source of motivation. Give them a go :)",
+    "created_at": "2021-04-16T14:25:45.841Z",
+    "category": 3,
     "owner": 4
   }
 }

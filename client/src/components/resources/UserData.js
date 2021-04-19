@@ -13,7 +13,7 @@ const UserData = () => {
     }
     getData()
   }, [])
-
+  // console.log('USER>>', userData)
   
 
   return (
