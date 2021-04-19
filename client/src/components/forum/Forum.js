@@ -20,9 +20,12 @@ const Forum = () => {
   return (
     <>
       <h1>Join the community!</h1>
-      { categories.map((category, i) => (
-        <ForumCard key={i} {...category } />
-      ))}
+      <div className="main-forum-container">
+        { categories.map((category, i) => (
+        
+          <ForumCard key={i} {...category } />
+        ))}
+      </div>
     </>
   )
 }

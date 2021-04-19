@@ -34,9 +34,10 @@ const ForumCard = ({ id, title, comments }) => {
   }
 
   return (
-    <div>
-      <h2>{title}</h2>
+    <div className="ui segment single-forum-container">
       
+      <h2 className="ui left floated header">{title}</h2>
+      <div className="ui clearing divider"></div>
       {comments.map((comment, i) => {
         const { text, owner } = comment
       
