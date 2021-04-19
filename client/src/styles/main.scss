@@ -1,4 +1,8 @@
 
+#root {
+  height: 100vh;
+}
+
 h1 {
   text-align: center;
 }
@@ -40,8 +44,26 @@ h1 {
 }
 
 // tracker page
+.cal-habit-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.react-calendar {
+  height: 300px;
+  width: 350px;
+}
+
+.react-calendar__month-view__weekdays {
+  color: gray;
+}
+
 .quote-container {
+  height: 150px;
   text-align: center;
+  padding-top: 50px;
 }
 
 .habit-container {

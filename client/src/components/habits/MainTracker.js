@@ -3,11 +3,13 @@ import axios from 'axios'
 import { userID } from '../../helpers/auth'
 import HabitCard from './HabitCard'
 import { Link } from 'react-router-dom'
+import Calendar from 'react-calendar'
 
 
 const MainTracker = () => {
   const [habits, setHabits] = useState([])
   const [quote, setQuote] = useState(null)
+  const [calendarDate, setCalendarDate] = useState(new Date())
 
   useEffect(() => {
     const getData = async() => {
@@ -43,16 +45,28 @@ const MainTracker = () => {
   const randomQuote = mappedQuotes[Math.floor(Math.random() * mappedQuotes.length)]
   // console.log('RANDOM QUOTE', randomQuote)
 
+
+  const onChange = (calendarDate) => {
+    setCalendarDate(calendarDate)
+  }
+
   return (
     <>
       <h1>TRACK YOUR PROGRESS</h1>
-      <div className="habit-container"> 
-        { filteredArray.map(habit => (
-          <HabitCard key={habit.id} {...habit}/>
-        ))}
-        <Link to="/categories">
-          <button>Add a habit to track</button>
-        </Link>
+      <div className="cal-habit-container">
+        <Calendar 
+          onChange={onChange}
+          value={calendarDate}
+        />
+  
+        <div className="habit-container"> 
+          { filteredArray.map(habit => (
+            <HabitCard key={habit.id} {...habit}/>
+          ))}
+          <Link to="/categories">
+            <button>Add a habit to track</button>
+          </Link>
+        </div>
       </div>
       <div className="quote-container">
         <p>{randomQuote}</p>
