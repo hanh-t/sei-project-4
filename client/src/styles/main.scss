@@ -44,8 +44,16 @@ h1 {
   text-align: center;
 }
 
+.habit-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
 
+}
 
+h6.category-on-habit {
+  visibility: hidden;
+}
 
 // footer
 .footer {

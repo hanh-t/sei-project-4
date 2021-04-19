@@ -46,12 +46,14 @@ const MainTracker = () => {
   return (
     <>
       <h1>TRACK YOUR PROGRESS</h1>
-      { filteredArray.map(habit => (
-        <HabitCard key={habit.id} {...habit}/>
-      ))}
-      <Link to="/categories">
-        <button>Add a habit to track</button>
-      </Link>
+      <div className="habit-container"> 
+        { filteredArray.map(habit => (
+          <HabitCard key={habit.id} {...habit}/>
+        ))}
+        <Link to="/categories">
+          <button>Add a habit to track</button>
+        </Link>
+      </div>
       <div className="quote-container">
         <p>{randomQuote}</p>
 
