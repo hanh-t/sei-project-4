@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'categories',
     'habits',
     'comments',
-    'resources'
+    'resources',
+    'quotes'
 ]
 
 MIDDLEWARE = [

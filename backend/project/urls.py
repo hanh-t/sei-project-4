@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/auth/', include('jwt_auth.urls')),
     path('api/habits/', include('habits.urls')),
     path('api/comments/', include('comments.urls')),
-    path('api/resources/', include('resources.urls'))
+    path('api/resources/', include('resources.urls')),
+    path('api/quotes/', include('quotes.urls'))
 ]

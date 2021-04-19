@@ -1,0 +1,226 @@
+[
+{
+  "model": "quotes.quote",
+  "pk": 1,
+  "fields": {
+    "text": "The Cycle of Improvement:\r\n1. Awareness - identify what you need to improve.\r\n2. Deliberate practice - focus your conscious effort on the specific area you want to improve.\r\n3. Habit - with practice, the effortful becomes automatic.\r\n4. Repeat - begin again."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 2,
+  "fields": {
+    "text": "Mental toughness is persistence not intensity."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 3,
+  "fields": {
+    "text": "Where you spend your attention is where you spend your life."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 4,
+  "fields": {
+    "text": "You always hold the rights to your effort, but never to your results.\r\nResults are entitled to no one. At best, they are on loan and must be renewed each day.\r\nAll you own is the right to try."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 5,
+  "fields": {
+    "text": "Stop worrying about how long it will take and get started. Time will pass either way."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 6,
+  "fields": {
+    "text": "Time spent working hard is often better spent identifying where the bottleneck is located.\r\nWorking hard on the wrong thing leads to frustration, not progress."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 7,
+  "fields": {
+    "text": "When you lose track of time, you are either living your best life or wasting it"
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 8,
+  "fields": {
+    "text": "It is better to start as a fool and learn from your mistakes than to fake being a genius and ignore your errors."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 9,
+  "fields": {
+    "text": "Progress requires unlearning."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 10,
+  "fields": {
+    "text": "A difficult lesson to learn: Your most persistent distractions will seem justified to you."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 11,
+  "fields": {
+    "text": "Am I being effective or just busy?"
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 12,
+  "fields": {
+    "text": "It's better to do less than you hoped than nothing at all. No zero days."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 13,
+  "fields": {
+    "text": "The key—if you want to build habits that last—is to join a group where the desired behaviour is the normal behaviour."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 14,
+  "fields": {
+    "text": "Most people think they lack motivation when they really lack clarity."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 15,
+  "fields": {
+    "text": "What looks like talent is often careful preparation.\r\nWhat looks like skill is often persistent revision."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 16,
+  "fields": {
+    "text": "Rowing harder doesn't help if the boat is headed in the wrong direction.\r\n - Source: AntiPatterns in Project Management"
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 17,
+  "fields": {
+    "text": "It takes many hours to make what you want to make. The hours don’t suddenly appear. You have to steal them from comfort."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 18,
+  "fields": {
+    "text": "Read books that are relevant to what you want to achieve and reading will never seem boring."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 19,
+  "fields": {
+    "text": "Momentum is a double-edged sword. It can propel you to new heights or keep you locked into previous choices and old habits."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 20,
+  "fields": {
+    "text": "Reading can teach you the best of what others already know.\r\nReflection can teach you the best of what only you can know."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 21,
+  "fields": {
+    "text": "You can borrow knowledge, but not action."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 22,
+  "fields": {
+    "text": "The feeling of progress is one of the best feelings of all. This is true even when progress is small."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 23,
+  "fields": {
+    "text": "If you genuinely care about the goal, you’ll focus on the system."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 24,
+  "fields": {
+    "text": "Successes are revised mistakes."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 25,
+  "fields": {
+    "text": "Every skill you have today was once unknown to you. The human brain is a learning machine. Stick with it."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 26,
+  "fields": {
+    "text": "The best exercise for gaining strength is not missing workouts."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 27,
+  "fields": {
+    "text": "The more disciplined your environment is, the less disciplined you need to be. Don't swim upstream."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 28,
+  "fields": {
+    "text": "We often avoid taking action because we think \"I need to learn more,\" but the best way to learn is often by taking action."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 29,
+  "fields": {
+    "text": "Improvements are only temporary until they become part of who you are. Focus on the identity you want to build."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 30,
+  "fields": {
+    "text": "Maturity is learning how to start when you feel like procrastinating and learning how to listen when you feel like talking."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 31,
+  "fields": {
+    "text": "The trajectory of your life bends in the direction of your habits."
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 32,
+  "fields": {
+    "text": "Self-esteem is just the reputation that you have with yourself. You'll always know."
+  }
+}
+]

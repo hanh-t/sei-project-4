@@ -47,17 +47,20 @@ const Navbar = () => {
           }
           
           { !userIsAuthenticated() && 
-      <>
-        <Link to='/auth/register'>
-          {/* <i className="sign in alternate icon"></i> */}
-      Register
-        </Link>
-        <Link to='/auth/login'>
-          {/* <i className="sign in alternate icon"></i> */}
-        Login
-        </Link>
-      </>
-      
+          <>
+            <div className="item">
+              <Link to='/auth/register'>
+                {/* <i className="sign in alternate icon"></i> */}
+                Register
+              </Link>
+            </div>
+            <div className="item">
+              <Link to='/auth/login'>
+                {/* <i className="sign in alternate icon"></i> */}
+                Login
+              </Link>
+            </div>
+          </>
           }
           { userIsAuthenticated() &&
           <div className="item">

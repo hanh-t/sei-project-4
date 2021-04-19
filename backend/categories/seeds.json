@@ -24,7 +24,7 @@
   "model": "categories.category",
   "pk": 4,
   "fields": {
-    "title": "Learning/Work/Productivity"
+    "title": "Work/Productivity"
   }
 },
 {
@@ -32,13 +32,6 @@
   "pk": 5,
   "fields": {
     "title": "Wellness"
-  }
-},
-{
-  "model": "categories.category",
-  "pk": 6,
-  "fields": {
-    "title": "Add Your Own..."
   }
 }
 ]
