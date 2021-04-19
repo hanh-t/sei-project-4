@@ -1,11 +1,27 @@
 
+h1 {
+  text-align: center;
+}
+
+
+
 // navbar
 .navbar-menu {
   margin-bottom: 0px !important;
   border-radius: 0px !important;
 }
 
+// category list
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
+.ui.circular.segment {
+  width:200px;
+  height:200px
+}
 
 // footer
 .footer {

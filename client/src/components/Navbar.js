@@ -29,13 +29,13 @@ const Navbar = () => {
           { userIsAuthenticated() &&
           <>
             <div className="item">
-              <Link to="/habits">
-            Tracker
+              <Link to="/categories/community">
+            Community
               </Link>
             </div>
             <div className="item">
-              <Link to="/categories/community">
-            Community
+              <Link to="/habits">
+            Tracker
               </Link>
             </div>
             <div className="item">

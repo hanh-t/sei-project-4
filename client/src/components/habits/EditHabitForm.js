@@ -1,7 +1,14 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 const EditHabitForm = ({ formData, handleChange, handleSubmit }) => {
-  console.log('FORM', formData)
+  const history = useHistory()
+
+  const handleCancel = () => {
+    history.push('/habits/')
+    window.location.reload()
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit} >
@@ -23,7 +30,8 @@ const EditHabitForm = ({ formData, handleChange, handleSubmit }) => {
             onChange={handleChange}
           />
         </div>   
-        <button type="submit">Save changes</button> 
+        <button type="submit">Save changes</button><button onClick={handleCancel}>Cancel</button> 
+
       </form>
     </>
   )
