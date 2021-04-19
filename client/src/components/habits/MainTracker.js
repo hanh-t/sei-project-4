@@ -28,7 +28,7 @@ const MainTracker = () => {
 
   if (!quote) return ''
 
-  console.log('QUOTES', quote)
+  // console.log('QUOTES', quote)
 
   const filteredArray = habits.filter(habit => {
     return habit.owner === userID()
@@ -41,7 +41,7 @@ const MainTracker = () => {
   // console.log(mappedQuotes)
 
   const randomQuote = mappedQuotes[Math.floor(Math.random() * mappedQuotes.length)]
-  console.log('RANDOM QUOTE', randomQuote)
+  // console.log('RANDOM QUOTE', randomQuote)
 
   return (
     <>
@@ -50,9 +50,12 @@ const MainTracker = () => {
         <HabitCard key={habit.id} {...habit}/>
       ))}
       <Link to="/categories">
-        <button>Add another habit to track</button>
+        <button>Add a habit to track</button>
       </Link>
-      
+      <div className="quote-container">
+        <p>{randomQuote}</p>
+
+      </div>
 
     </>
   )
