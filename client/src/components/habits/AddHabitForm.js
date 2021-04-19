@@ -34,7 +34,7 @@ const HabitForm = () => {
 
   const handleCancel = () => {
     history.push('/habits/')
-    window.location.reload()
+    location.reload()
   }
  
 

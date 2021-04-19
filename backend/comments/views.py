@@ -8,7 +8,7 @@ from .serializers.common import CommentSerializer
 from .models import Comment 
 
 class CommentListView(APIView):
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def post(self, request):
         request.data["owner"] = request.user.id 
@@ -19,6 +19,24 @@ class CommentListView(APIView):
         return Response(comment_to_create.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 class CommentDetailView(APIView):
+    def get_comment(self, pk):
+        try:
+            return Comment.objects.get(pk=pk)
+        except Comment.DoesNotExist:
+            raise NotFound(detail="🚨 Cannot find that comment")
+
+    def get(self, _request, pk):
+        comment = self.get_comment(pk=pk) 
+        serialized_comment = CommentSerializer(comment) 
+        return Response(serialized_comment.data, status=status.HTTP_200_OK)
+    
+    def put(self, request, pk):
+        comment_to_edit = self.get_comment(pk=pk)
+        updated_comment = CommentSerializer(comment_to_edit, data=request.data)
+        if updated_comment.is_valid():
+            updated_comment.save()
+            return Response(updated_comment.data, status=status.HTTP_202_ACCEPTED)
+        return Response(updated_comment.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
     def delete(self, request, pk):
         try:

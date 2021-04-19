@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ResourceWishlist from './ResourceWishlist'
+import { userIsAuthenticated } from '../../helpers/auth'
 
 const ResourceShow = ({ userData }) => {
   const params = useParams()
@@ -15,7 +16,7 @@ const ResourceShow = ({ userData }) => {
     }
     getData()
   }, [])
-  
+  console.log('RESOURCE', resource)
   if (!resource) return ''
 
   // const { }
@@ -24,9 +25,12 @@ const ResourceShow = ({ userData }) => {
     <>
       <h1>More details</h1>
       <p>{resource.title}</p>
-      <p>How to view: {resource.url}</p>
-      <p>Cost: {resource.price} points</p>
-
+      <p>How to view/where to find: {resource.url}</p>
+      { userIsAuthenticated() ? 
+        <p>Our cost: {resource.price} points</p>
+        :
+        <p>Login to see our price</p>
+      }
       <ResourceWishlist 
         userData = {userData}
         resource = {resource}

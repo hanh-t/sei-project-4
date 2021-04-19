@@ -1,8 +1,16 @@
 import React from 'react'
 import { ImageUploadField } from '../components/ImageUploadField'
+import { useHistory, useParams } from 'react-router-dom'
 
 const EditUserForm = ({ handleChange, handleImageUrl, handleSubmit, formData }) => {
- 
+  const history = useHistory()
+  const params = useParams()
+
+  const handleCancel = () => {
+    history.push(`/auth/profile/${params.id}`)
+    window.location.reload()
+  }
+
   return (
 
 
@@ -67,7 +75,7 @@ const EditUserForm = ({ handleChange, handleImageUrl, handleSubmit, formData }) 
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Submit</button> <button onClick={handleCancel}>Cancel</button>
           </form>
         </div>
       </div>

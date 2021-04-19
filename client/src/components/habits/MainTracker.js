@@ -19,7 +19,7 @@ const MainTracker = () => {
 
   useEffect(() =>{
     const getData = async() => {
-      const response = await axios.get('api/quotes/')
+      const response = await axios.get('/api/quotes/')
       setQuote(response.data)
       
     }

@@ -14,7 +14,8 @@ import ResourceIndex from './components/resources/ResourceIndex'
 import UserData from './components/resources/UserData'
 import AddHabitForm from './components/habits/AddHabitForm'
 import EditHabit from './components/habits/EditHabit'
-import Forum from './components/Forum'
+import Forum from './components/forum/Forum'
+import EditComment from './components/forum/EditComment'
 
 
 const App = () => {
@@ -46,6 +47,9 @@ const App = () => {
         
         <Route exact path="/categories/:id">
           <AddHabitForm />
+        </Route>
+        <Route path="/comments/:id">
+          <EditComment />
         </Route>
         
         <Route  path="/habits">

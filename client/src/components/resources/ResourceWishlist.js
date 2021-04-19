@@ -6,7 +6,7 @@ const ResourceWishlist = ({ userData, resource }) => {
   if (!userData) return ''  
 
   const [wishlist] =  useState({
-    wishList: [...userData.wishlist, resource.id],
+    wishlist: [...userData.wishlist, resource.id],
   })
 
 

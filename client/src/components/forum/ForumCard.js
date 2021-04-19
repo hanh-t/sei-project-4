@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 // import DisplayComments from './DisplayComments'
 import axios from 'axios'
-import { getTokenFromLocalStorage } from '../helpers/auth'
-import { useHistory } from 'react-router-dom'
+import { getTokenFromLocalStorage, userIsOwner } from '../../helpers/auth'
+import { useHistory, Link } from 'react-router-dom'
 
 
 const ForumCard = ({ id, title, comments }) => {
@@ -36,6 +36,7 @@ const ForumCard = ({ id, title, comments }) => {
   return (
     <div>
       <h2>{title}</h2>
+      
       {comments.map((comment, i) => {
         const { text, owner } = comment
       
@@ -46,8 +47,15 @@ const ForumCard = ({ id, title, comments }) => {
           </a>
           <h5 key={owner.username}>{owner.username}</h5>
           {/* <h5 key={createdAt}>{createdAt}</h5> */}
+          { userIsOwner(owner.id) && 
+      <div className="buttons">
+        <Link to={`/api/comments/${id}`} className="ui basic blue button tiny"> Edit</Link>
+      </div>  
+          }
         </div>
       })}
+
+     
       <div className="ui input">
         <input type="text" 
           placeholder="Add a comment, question or tip!" 
