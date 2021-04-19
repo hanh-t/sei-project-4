@@ -4,11 +4,14 @@ import React from 'react-router-dom'
 // import { Rating } from 'semantic-ui-react'
 
 const DisplayComments = ({ text, createdAt, owner }) => {
+  console.log('TEXT', text)
+
   const date = new Date(createdAt)
   // const params = useParams()
   const formattedTime = date.toUTCString()
 
-  console.log('OWNER', owner)
+
+ 
 
 
   // if (!userIsOwner) return ''

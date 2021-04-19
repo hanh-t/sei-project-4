@@ -28,9 +28,9 @@ const UserProfile = () => {
       <Link to={`/auth/profile/${params.id}/edit`}>
         <button>Edit profile</button>
       </Link>
-      <Link to="/habits/">
+      {/* <Link to="/habits/">
         Your Habit Tracker
-      </Link>
+      </Link> */}
     </>
   )
 }

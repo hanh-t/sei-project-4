@@ -14,9 +14,13 @@ const Forum = () => {
     }
     getData()
   }, [])
-  // console.log('DATA', categories[0].comments) 
+  console.log('DATA', categories) 
 
-  
+  // const mappedCategories = categories.map(item => {
+  //   return item.text
+  // })
+
+  // console.log('MAPPED CAT', mappedCategories)
   
   return (
     <>

@@ -48,7 +48,7 @@ const App = () => {
           <AddHabitForm />
         </Route>
         
-        <Route  exact path="/habits">
+        <Route  path="/habits">
           <MainTracker />
         </Route>
         <Route  exact path="/habits/:id">
