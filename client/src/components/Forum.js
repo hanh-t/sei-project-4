@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ForumCard from './ForumCard'
+// import { useParams } from 'react-router-dom'
 
 const Forum = () => {
   const [categories, setCategories] = useState([])
-
+  // const params = useParams()
+  
   useEffect(() => {
     const getData = async() => {
       const { data } = await axios.get('/api/categories')
@@ -12,7 +14,7 @@ const Forum = () => {
     }
     getData()
   }, [])
-
+  // console.log('DATA', categories[0].comments) 
 
   
   
