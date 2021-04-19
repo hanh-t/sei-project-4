@@ -13,11 +13,40 @@ const Navbar = () => {
 
   return (
     <>
-      <Link to="/">
-        Home
-      </Link>
-     
-      { !userIsAuthenticated() && 
+      <div className="ui inverted menu navbar-menu">
+        <div className="header item">
+          <Link to="/">
+          Home
+          </Link>
+        </div>
+
+        <div className="right menu">
+          <div className="item">
+            <Link to="/resources">
+              Resources
+            </Link>
+          </div>
+          { userIsAuthenticated() &&
+          <>
+            <div className="item">
+              <Link to="/habits">
+            Tracker
+              </Link>
+            </div>
+            <div className="item">
+              <Link to="/categories/community">
+            Community
+              </Link>
+            </div>
+            <div className="item">
+              <Link to={`auth/profile/${userID()}`}>
+            Profile
+              </Link>
+            </div>
+          </>
+          }
+          
+          { !userIsAuthenticated() && 
       <>
         <Link to='/auth/register'>
           {/* <i className="sign in alternate icon"></i> */}
@@ -28,31 +57,15 @@ const Navbar = () => {
         Login
         </Link>
       </>
-      }
-      <Link to="/resources">
-        Resources
-      </Link>
       
-      { userIsAuthenticated() &&
-      <>
-        <Link to="/categories">
-        Choose a category
-        </Link>
-  
-        <Link to={`auth/profile/${userID()}`}>
-        Profile
-        </Link>
-
-        <Link to="/categories/community">
-          Community
-        </Link>
-      </>
-      }
-      { userIsAuthenticated() &&
-        
-          <a onClick={handleLogout}> Log out</a>
-    
-      }
+          }
+          { userIsAuthenticated() &&
+          <div className="item">
+            <a className="button" onClick={handleLogout}> Log out</a>
+          </div>
+          }
+        </div>
+      </div>
     </>
   )
 }

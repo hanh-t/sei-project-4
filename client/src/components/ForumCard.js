@@ -1,4 +1,5 @@
 import React from 'react'
+import DisplayComments from './DisplayComments'
 
 const ForumCard = ({ title, comments }) => {
   // console.log('COMMENTS', comments)
@@ -7,8 +8,12 @@ const ForumCard = ({ title, comments }) => {
     <div>
       <h2>{title} Forum</h2>
       {comments.map(comment => {
-        return <p key={comment.id}>{comment.text}</p>
-      })},
+        {/* <p>{title}</p> */}
+
+        <DisplayComments key={comment.id} {...comment}/> 
+  
+      })}
+     
     </div>
   )
 }

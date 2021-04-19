@@ -23,6 +23,7 @@ const MainTracker = () => {
 
   return (
     <>
+      <h1>TRACK YOUR PROGRESS</h1>
       { filteredArray.map(habit => (
         <HabitCard key={habit.id} {...habit}/>
       ))}
