@@ -56,12 +56,13 @@ const App = () => {
         <Route  path="/habits/intro">
           <IntroTracker />
         </Route>
-        <Route  path="/habits">
-          <MainTracker />
-        </Route>
         <Route  exact path="/habits/:id">
           <EditHabit />
         </Route>
+        <Route  path="/habits">
+          <MainTracker />
+        </Route>
+        
         <Route  exact path="/resources">
           <ResourceIndex />
         </Route>
