@@ -30,3 +30,8 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
         
+class UserPartialSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = User
+        fields = ('points',)
