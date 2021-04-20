@@ -23,14 +23,16 @@ const ResourceShow = ({ userData }) => {
 
   return (
     <>
-      <h1>More details</h1>
-      <p>{resource.title}</p>
-      <p>How to view/where to find: {resource.url}</p>
-      { userIsAuthenticated() ? 
-        <p>Our cost: {resource.price} points</p>
-        :
-        <p>Login to see our price</p>
-      }
+      <h1 className="headers">More details</h1>
+      <div className="resource-detail">
+        <p>{resource.title}</p>
+        <p>How to view/where to find: {resource.url}</p>
+        { userIsAuthenticated() ? 
+          <p>Our cost: {resource.price} points</p>
+          :
+          <p>Login to see our price</p>
+        }
+      </div>
       <ResourceWishlist 
         userData = {userData}
         resource = {resource}
