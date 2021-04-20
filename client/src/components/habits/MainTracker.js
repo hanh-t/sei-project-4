@@ -6,10 +6,14 @@ import { Link } from 'react-router-dom'
 import Calendar from 'react-calendar'
 
 
+
 const MainTracker = () => {
   const [habits, setHabits] = useState([])
   const [quote, setQuote] = useState(null)
   const [calendarDate, setCalendarDate] = useState(new Date())
+
+
+
 
   useEffect(() => {
     const getData = async() => {
@@ -58,15 +62,15 @@ const MainTracker = () => {
           onChange={onChange}
           value={calendarDate}
         />
-  
+        
         <div className="habit-container"> 
           { filteredArray.map(habit => (
             <HabitCard key={habit.id} {...habit}/>
           ))}
-          <Link to="/categories">
-            <button>Add a habit to track</button>
-          </Link>
         </div>
+        <Link to="/categories">
+          <button>Add a habit to track</button>
+        </Link>
       </div>
       <div className="quote-container">
         <p>{randomQuote}</p>

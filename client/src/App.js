@@ -16,6 +16,7 @@ import AddHabitForm from './components/habits/AddHabitForm'
 import EditHabit from './components/habits/EditHabit'
 import Forum from './components/forum/Forum'
 import EditComment from './components/forum/EditComment'
+import IntroTracker from './components/habits/IntroTracker'
 
 
 const App = () => {
@@ -52,6 +53,9 @@ const App = () => {
           <EditComment />
         </Route>
         
+        <Route  path="/habits/intro">
+          <IntroTracker />
+        </Route>
         <Route  path="/habits">
           <MainTracker />
         </Route>
