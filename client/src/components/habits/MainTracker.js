@@ -56,25 +56,28 @@ const MainTracker = () => {
 
   return (
     <>
-      <h1>TRACK YOUR PROGRESS</h1>
+      <h1 className="headers">TRACK YOUR PROGRESS</h1>
       <div className="cal-habit-container">
-        <Calendar 
-          onChange={onChange}
-          value={calendarDate}
-        />
-        
+        <div className="cal-container">
+          <Calendar 
+            onChange={onChange}
+            value={calendarDate}
+          />
+        </div>
         <div className="habit-container"> 
           { filteredArray.map(habit => (
             <HabitCard key={habit.id} {...habit}/>
           ))}
         </div>
         <Link to="/categories">
-          <button className="ui icon right labeled standard basic button"><i aria-hidden="true" className="add icon"></i>Add a habit</button>
+          <button className="ui inverted icon right labeled standard basic button"><i aria-hidden="true" className="add icon"></i>Add a habit</button>
         </Link>
       </div>
+      
       <div className="points-container">
         <span></span>
       </div>
+
       <div className="quote-container">
         <p>{randomQuote}</p>
 

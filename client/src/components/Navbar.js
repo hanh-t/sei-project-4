@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="ui menu navbar-menu">
+      <div className="ui inverted menu navbar-menu">
         <div className="header item">
           <Link to="/">
           Home

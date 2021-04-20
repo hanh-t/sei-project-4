@@ -76,32 +76,34 @@ const IntroTracker = () => {
   }
 
   return (
-    <div className="questions-for-user">
-      <h1>How did it go today?</h1>
-      { filteredArray.map(habit => (
-        <>
-          <h2>{habit.title}, {habit.frequency}</h2>
-          
-          <h6 className="category-on-habit">{habit.category}</h6>
-          <button onClick={handleYes} value="2">👍</button><button onClick={handleNo} value="0">👎</button>
-        </>
-      ))}
-      <div>
-        <span>Another {points} points!</span>
 
+    <>
+      <h1 className="headers">How did it go today?</h1>
+      <div className="questions-for-user">
+        { filteredArray.map(habit => (
+          <>
+            <h2 className="headers">{habit.title}, {habit.frequency}</h2>
+          
+            <h6 className="category-on-habit">{habit.category}</h6>
+            <div className="intro-tracker-buttons">
+              <button onClick={handleYes} value="2" className="ui icon button"><i aria-hidden="true" className="thumbs up outline icon"></i> </button>
+              <button onClick={handleNo} value="0" className="ui icon button"><i aria-hidden="true" className="thumbs down outline icon"></i></button>
+            </div>
+          </>
+        ))}
       </div>
+    
+      <div className="intro-points-button">
+        <span className="points-span">Another {points} points!</span>
+     
       
-      {/* <Link to='/habits/'> */}
-      <button onClick={handleUpdatedPoints}>
-        Go to your main tracker page
-      </button>
-      {/* </Link> */}
-      
-      {/* <UpdatePoints 
-        key={params.id} {...userData}
-      /> */}
-      
-    </div>  
+        {/* <Link to='/habits/'> */}
+        <button onClick={handleUpdatedPoints} className="ui inverted animated button"><div className="visible content">Go to your main tracker page</div><div className="hidden content"><i aria-hidden="true" className="arrow right icon"></i></div> 
+        
+        </button>
+        {/* </Link> */}
+      </div>
+    </>
   )
 }
 
