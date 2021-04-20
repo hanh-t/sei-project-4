@@ -62,7 +62,7 @@ const EditHabit = () => {
         handleSubmit={handleSubmit}
         formData={formData}
       />
-      <button onClick={handleDelete}>Delete this habit</button>
+      <button onClick={handleDelete} className="ui basic inverted button">Delete this habit</button>
 
     </>
   )

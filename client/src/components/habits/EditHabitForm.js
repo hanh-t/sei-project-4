@@ -30,7 +30,7 @@ const EditHabitForm = ({ formData, handleChange, handleSubmit }) => {
             onChange={handleChange}
           />
         </div>   
-        <button type="submit">Save changes</button><button onClick={handleCancel}>Cancel</button> 
+        <button type="submit" className="ui basic inverted button">Save changes</button><button onClick={handleCancel} className="ui basic inverted button">Cancel</button> 
 
       </form>
     </>

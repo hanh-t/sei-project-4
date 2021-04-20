@@ -74,9 +74,7 @@ const Login = () => {
                 <div className="subtitle is-6">Access unauthorised. Please try re-entering your credentials.</div>
                 }
               </div>
-              <div className="field">
-                {/* <button type="submit" className="button is-fullwidth">Login</button> */}
-              </div>
+ 
             </form>
           </div>
           
