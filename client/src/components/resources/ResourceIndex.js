@@ -27,27 +27,31 @@ const Resources = () => {
   if (!resources) return ''
   return (
     <>
-      <h1>RESOURCES LIST</h1>
-      <h2>Here is a list of resources that we love and know will be useful for you. We have a small selection of books that you can purchase from us with your points. If you have not yet signed up, what are you waiting for? Your future habits will thank you!</h2>
-      {}
+      <h1 className="headers">RESOURCES LIST</h1>
+      <h2 className="headers">Here is a list of resources that we love and know will be useful for you. We have a small selection of books that you can purchase from us with your points. If you have not yet signed up, what are you waiting for? Your future habits will thank you!</h2>
+      
+      
       <select id="dropdown-resources" onChange={filteredResources}>
-        <option value="All">All</option>
+        <option value="--">--</option>
         <option value="Article">Article</option>
         <option value="Book">Book</option>
         <option value="Podcast">Podcast</option>
         <option value="Video">Video</option>
       </select>
-      {/* <div className="resource-card-container">
+      
+      <div className="resource-filter-container">
         {filterResources.map(resource => ( 
           <ResourceCard key={resource.id} {...resource} />
         ))}
-       
-      </div> */}
+      </div>
+        
       <div className="resource-card-container">
         {resources.map(resource => ( 
           <ResourceCard key={resource.id} {...resource} />
         ))}
       </div>
+    
+      
     </>
   )
 }

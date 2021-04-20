@@ -33,66 +33,59 @@ const Login = () => {
 
   return (
     <>
-      <div className="wholePage-login">
-        <div className="ui container placeholder segment loginForm">
-          <div className="ui two column very relaxed stackable grid">
-            <div className="column">
-              <form onSubmit={handleSubmit} className="ui form">
-                <div className="field">
-                  <label>Email</label>
-                  <div className="ui left icon input">
-                    <input
-                      className="input "
-                      type="email"
-                      placeholder="Email"
-                      name="email"
-                      onChange={handleChange}
-                      value={formData.email}
-                    />
-                    < i className="user icon"></i>
-                  </div>
+      {/* <div className="login-page"> */}
+      <h1 className="headers">Login</h1>
+      <div className="ui container placeholder segment login-form">
+        <div className="ui two column ">
+          <div className="column">
+            <form onSubmit={handleSubmit} className="ui form">
+              <div className="field">
+                <label>Email</label>
+                <div className="ui left icon input">
+                  <input
+                    className="input "
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    onChange={handleChange}
+                    value={formData.email}
+                  />
+                  < i className="user icon"></i>
                 </div>
-                <div className="field">
-                  <label>Password</label>
-                  <div className="ui left icon input">
-                    <input
-                      className="input"
-                      type="password"
-                      placeholder="Password"
-                      name="password"
-                      onChange={handleChange}
-                      value={formData.password}
-                    />
-                    <i className="lock icon"></i>
-                  </div>
+              </div>
+              <div className="field">
+                <label>Password</label>
+                <div className="ui left icon input">
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={handleChange}
+                    value={formData.password}
+                  />
+                  <i className="lock icon"></i>
                 </div>
+              </div>
               
-                <button type="submit" className="ui basic submit button">Login</button>
-                <div className="field">
-                  { errors && 
+              <button type="submit" className="ui basic submit button">Login</button>
+              <div className="field">
+                { errors && 
                 <div className="subtitle is-6">Access unauthorised. Please try re-entering your credentials.</div>
-                  }
-                </div>
-                <div className="field">
-                  {/* <button type="submit" className="button is-fullwidth">Login</button> */}
-                </div>
-              </form>
-            </div>
-            {/* <div className="middle aligned column">
-              <Link to='/register' className="ui big button">
-                <i className="signup icon"></i>
-        Register
-              </Link>
-            </div> */}
+                }
+              </div>
+              <div className="field">
+                {/* <button type="submit" className="button is-fullwidth">Login</button> */}
+              </div>
+            </form>
           </div>
-          <div>
-            {/* Or */}
-          </div>
-
+          
         </div>
+
+      </div>
         
       
-      </div>
+      {/* </div> */}
     </>
   )
 }

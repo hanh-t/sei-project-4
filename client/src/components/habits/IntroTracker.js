@@ -15,7 +15,7 @@ const IntroTracker = () => {
   const history = useHistory()
   
   const [pointsToSend, setPointstoSend] = useState({
-    points: `${newPoints}`,
+    points: 0,
   })
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const IntroTracker = () => {
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
       }
     )
-    history.push(`/auth/profile/${userData.id}/`)
+    history.push('/habits/')
     
   }
 

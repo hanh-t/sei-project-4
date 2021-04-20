@@ -69,7 +69,7 @@ const MainTracker = () => {
           ))}
         </div>
         <Link to="/categories">
-          <button>Add a habit to track</button>
+          <button className="ui icon right labeled standard basic button"><i aria-hidden="true" className="add icon"></i>Add a habit</button>
         </Link>
       </div>
       <div className="points-container">
