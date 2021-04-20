@@ -72,6 +72,9 @@ const MainTracker = () => {
           <button>Add a habit to track</button>
         </Link>
       </div>
+      <div className="points-container">
+        <span></span>
+      </div>
       <div className="quote-container">
         <p>{randomQuote}</p>
 
