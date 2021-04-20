@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background:#111;
+  color: white;
+  background-image: url('../assets/geeks-2894621_1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.93;
+}
+
 #root {
   height: 100vh;
 //   background: #457fca;  /* fallback for old browsers */
@@ -23,13 +39,23 @@ h2 {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 //  homepage
 .homepage-main {
-  background-image: url('../assets/geeks-2894621_1920.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.55;
-  height: 100vh;
+  // background-image: url('../assets/geeks-2894621_1920.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // opacity: 0.55;
+  // height: 100vh;
+  
 }
 
 // navbar
@@ -37,7 +63,10 @@ h2 {
   margin-bottom: 0px !important;
   border-radius: 0px !important;
   // background: #5691c8;  /* fallback for old browsers */
-  // background-color: #5691c8 !important;  /* Chrome 10-25, Safari 5.1-6 */
+  // background-color: #b08968 !important;  /* Chrome 10-25, Safari 5.1-6 */
+  
+  opacity: 0.55;
+  
 }
 
 // login
@@ -189,9 +218,15 @@ h6.category-on-habit {
 }
 // footer
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  
   text-align: center;
   padding: 70px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+    
+  
 }
+
