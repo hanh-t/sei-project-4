@@ -27,7 +27,10 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route   path="/auth/profile/:id">
+        <Route    path="/auth/profile/:id/edit">
+          <EditUserProfile />
+        </Route>
+        <Route   exact path="/auth/profile/:id">
           <UserProfile />
         </Route>
         <Route  path="/auth/register">
@@ -38,9 +41,7 @@ const App = () => {
         </Route>
        
         
-        <Route   path="/auth/profile/:id/edit">
-          <EditUserProfile />
-        </Route>
+        
         <Route exact path="/categories/community">
           <Forum />
         </Route>

@@ -24,12 +24,16 @@ const ResourceWishlist = ({ userData, resource }) => {
         headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
       }
     )
-    
+  }
+
+  const handlePurchase = (event) => {
+    console.log('CLICK', event.target.value)
   }
 
   return (
-    <div>
+    <div className="wishlist-btn">
       <button className="ui inverted basic button" onClick={ handleWishlist} value="Added to your wishlist!">Save for later</button>
+      <button className="ui inverted basic button" onClick={ handlePurchase} value="Added to your cart!">Buy this book</button>
     </div>
   )
 }

@@ -40,13 +40,15 @@ const HabitForm = () => {
 
   return (
     <div>
+      <h2 className="headers">Add your habit here</h2>
       <div className="ui container placeholder segment add-habit-form">
-        <div className="ui two column ">
+        <div className="ui column ">
           <div className="column">
-            <form onSubmit={handleSubmit} className="add-habit-form">
-              <div>
+            
+            <form onSubmit={handleSubmit} className=" ui form">
+              <div className="field">
                 <label>Category</label>
-                <textarea
+                <input
                   className="input"
                   placeholder="Category"
                   name="category"
@@ -54,9 +56,9 @@ const HabitForm = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div>
+              <div className="field">
                 <label>What is your new habit?</label>
-                <textarea
+                <input
                   className="input"
                   placeholder="I will read 5 pages of my new book..."
                   name="title"
@@ -64,9 +66,9 @@ const HabitForm = () => {
                   onChange={handleChange}
                 />
               </div>
-              <div>
+              <div className="field">
                 <label>How often will you do it?</label>
-                <textarea
+                <input
                   className="input"
                   placeholder="Daily..."
                   name="frequency"
@@ -75,7 +77,7 @@ const HabitForm = () => {
                 />
               </div>
               <div className="new-habit-buttons">
-                <button onClick={handleSubmit} className="ui basic button">Submit</button>    
+                <button onClick={handleSubmit} className="ui basic button submit-own">Submit</button>    
                 <button onClick={handleCancel} className="ui basic button">Cancel</button>
               </div>
             </form>

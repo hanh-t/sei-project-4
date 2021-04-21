@@ -25,20 +25,21 @@ const ResourceShow = ({ userData }) => {
   return (
     <>
       <h1 className="headers">More details</h1>
-      <div className="resource-detail">
-        <p>{resource.title}</p>
-        <p>How to view/where to find: {resource.url}</p>
-        { userIsAuthenticated() ? 
-          <p>Our cost: {resource.price} points</p>
-          :
-          <p>Login to see our price</p>
-        }
+      <div className="details-container">
+        <div className="resource-detail">
+          <h2>{resource.title}</h2>
+          <h2>How to view/where to find: {resource.url}</h2>
+          { userIsAuthenticated() ? 
+            <h3>Our cost: {resource.price} points</h3>
+            :
+            <p>Login to see our price</p>
+          }
+        </div>
+        <ResourceWishlist 
+          userData = {userData}
+          resource = {resource}
+        />
       </div>
-      <ResourceWishlist 
-        userData = {userData}
-        resource = {resource}
-      />
-      
     </>
   )
 }

@@ -128,12 +128,19 @@ a:hover {
 
 }
 
-// .resource-detail {
-//   display: flex;
-//   flex-direction:column;
-//   // align-content: center;
-// }
+.details-container {
+  display: flex;
+  flex-direction:column;
+  margin-top: 10vh;
+  margin-left: 30vw;
+  width: 50vw;
+}
 
+.wishlist-btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+}
 
 
 // category list
@@ -182,16 +189,22 @@ a:hover {
 
 .new-habit-buttons {
   display: flex;
-
+  margin-top: 2vh;
+  
 }
 
-.add-habit-form {
+.ui.container.placeholder.segment.add-habit-form{
   opacity: 0.6;
-  width: 50vw
+  width: 40vw;
+  margin-top: 6vh;
   label {
     color: black;
   }
 }
+
+// .ui.basic.button.submit-own {
+//   border-color: pink!important;
+// }
 
 //  intro tracker page
 .no-habits {
@@ -245,15 +258,26 @@ a:hover {
 .react-calendar {
   height: 300px;
   width: 350px;
+  opacity: 0.9;
+  
 }
 
 .react-calendar__month-view__weekdays {
-  color: gray;
+  color: black;
 }
+// .react-calendar__month-view__days__day {
+//   background-color: pink;
+// }
+// .react-calendar__tile.clicked {
+//   background-color: red;
+// }
 
-.react-calendar__tile.clicked {
-  color: pink;
-}
+// .react-calendar__tile--active {
+//   background: pink;
+
+// }
+
+
 
 .habit-container {
   display: flex;

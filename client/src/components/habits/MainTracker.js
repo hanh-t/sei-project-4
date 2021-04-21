@@ -11,9 +11,7 @@ const MainTracker = () => {
   const [habits, setHabits] = useState([])
   const [quote, setQuote] = useState(null)
   const [calendarDate, setCalendarDate] = useState(new Date())
-
-
-
+  // const [active, setActive] = useState('false')
 
   useEffect(() => {
     const getData = async() => {
@@ -54,10 +52,12 @@ const MainTracker = () => {
     setCalendarDate(calendarDate)
   }
 
-  const changeColor = () => {
-    
-  }
+  const tileClassName = ({ date, view }) => view === 
+    'month' && date === calendarDate ? 'clicked' : null
 
+  
+
+  console.log('TILE', tileClassName)
   return (
     <>
       <h1 className="headers">YOUR HABITS</h1>
@@ -74,7 +74,8 @@ const MainTracker = () => {
             onChange={onChange}
             // onClickDay={(day) => console.log(day) }
             value={calendarDate}
-            tileClassName={changeColor}
+            // tileClassName={tileClassName}
+           
           />
         </div>
       </div>
