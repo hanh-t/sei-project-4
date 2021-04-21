@@ -47,16 +47,16 @@ const UserProfile = () => {
       <div className="user-hero-section">
         {profileImage}
       </div>
-      <div className="ui horizontal divider"><h1 >{`Great to see you again, ${username}!`}</h1></div>
+      <div className="ui horizontal divider"><h1 className="headers">{`Great to see you again, ${username}!`}</h1></div>
 
       <div className="main-user-section">
-        <div className="headers">
+        <div >
           <div className="user-info">
             
-            <h2>Full Name: {fullName}</h2>
-            <h2>Email: {email}</h2>
-            <h2>Username: {username}</h2>
-            <h2>Total points: {points}</h2>
+            <h2 className="headers">Full Name: {fullName}</h2>
+            <h2 className="headers">Email: {email}</h2>
+            <h2 className="headers">Username: {username}</h2>
+            <h2 className="headers">Total points: {points}</h2>
        
             <Link to={`/auth/profile/${params.id}/edit`}>
               <button className="ui icon right labeled standard basic button"><i aria-hidden="true" className="edit icon"></i>Edit profile</button>
@@ -64,13 +64,13 @@ const UserProfile = () => {
           </div>
         </div>
         <div className="user-saved-resources">
-          <h2>Saved resources</h2>
+          <h2 className="headers">Saved resources</h2>
           <p>{wishlist}</p>
         </div>
       </div>
       
       <div className="user-quote">
-        {randomQuote}
+        <h3 className="headers">{randomQuote}</h3>
       </div>
     </>
   )

@@ -54,33 +54,43 @@ const MainTracker = () => {
     setCalendarDate(calendarDate)
   }
 
+  const changeColor = () => {
+    
+  }
+
   return (
     <>
-      <h1 className="headers">TRACK YOUR PROGRESS</h1>
+      <h1 className="headers">YOUR HABITS</h1>
       <div className="cal-habit-container">
-        <div className="cal-container">
-          <Calendar 
-            onChange={onChange}
-            value={calendarDate}
-          />
-        </div>
+       
         <div className="habit-container"> 
           { filteredArray.map(habit => (
             <HabitCard key={habit.id} {...habit}/>
           ))}
         </div>
-        <Link to="/categories">
-          <button className="ui inverted icon right labeled standard basic button"><i aria-hidden="true" className="add icon"></i>Add a habit</button>
-        </Link>
-      </div>
-      
-      <div className="points-container">
-        <span></span>
-      </div>
 
+        <div className="cal-container">
+          <Calendar 
+            onChange={onChange}
+            // onClickDay={(day) => console.log(day) }
+            value={calendarDate}
+            tileClassName={changeColor}
+          />
+        </div>
+      </div>
+      <div className="habit-section">
+        <div className="add-habit-section">
+          <Link to="/categories">
+            <button className="ui inverted icon right labeled standard basic button"><i aria-hidden="true" className="add icon"></i>Add a habit</button>
+          </Link>
+        </div>
+        <div className="rewards-container">
+          <h3 className="headers">REWARDS</h3>
+          <h3 className="headers">Keep at those habits and you will earn points towards resources on our site!</h3>
+        </div>
+      </div>
       <div className="quote-container">
-        <p>{randomQuote}</p>
-
+        <h4 className="headers">{randomQuote}</h4>
       </div>
 
     </>

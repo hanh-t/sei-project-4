@@ -70,6 +70,8 @@ class UserDetailView(APIView):
             return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+# update points only when user tracks their progress on the frontend
+
 class UserPartialUpdateView(APIView):
 
     # def get_user(self, pk):

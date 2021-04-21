@@ -18,7 +18,7 @@ const Category = () => {
     <>
       <h1 className="headers">CATEGORY LIST</h1>
       <h2 className="headers">Select a category to input details</h2>
-      <div className="category-container">
+      <div className="animate__animated animate__pulse category-container">
         { categories.map( category => (
           <CategoryCard key={category.id} {...category} />
         ))}

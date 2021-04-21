@@ -68,7 +68,7 @@ const Login = () => {
                 </div>
               </div>
               
-              <button type="submit" className="ui icon right labeled basic button"><i aria-hidden="true" className="sign in alternate icon"></i>Enter</button>
+              <button type="submit" className="ui animated button"><div className="visible content">Enter</div><div className="hidden content"><i aria-hidden="true" className="sign-in icon"></i></div> </button>
               <div className="field">
                 { errors && 
                 <div className="subtitle is-6">Access unauthorised. Please try re-entering your credentials.</div>
