@@ -19,12 +19,20 @@ const Forum = () => {
   
   return (
     <>
-      <h1 className="headers">Join the community!</h1>
-      <div className="main-forum-container">
-        { categories.map((category, i) => (
+      <h1 className="headers">JOIN THE COMMUNITY!</h1>
+      <div className="forum-section">
+        <h2 className="headers">Join in the conversation with tips, questions or just any comments you may have. Scroll down for a specific category.</h2>
+      </div>
+      <div className="container-with-icon">
+        <div className="main-forum-container">
+          { categories.map((category, i) => (
         
-          <ForumCard key={i} {...category } />
-        ))}
+            <ForumCard key={i} {...category } />
+          ))}
+        </div>
+        <div className="icon">
+          <i aria-hidden="true" className="chevron down link huge icon" ></i>
+        </div>
       </div>
     </>
   )

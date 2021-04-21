@@ -40,11 +40,11 @@ const Resources = () => {
           <option value="Video">Video</option>
         </select>
       </div>
-      <div className="resource-filter-container">
+      {/* <div className="resource-filter-container">
         {filterResources.map(resource => ( 
           <ResourceCard key={resource.id} {...resource} />
         ))}
-      </div>
+      </div> */}
         
       <div className="resource-card-container">
         {resources.map(resource => ( 
