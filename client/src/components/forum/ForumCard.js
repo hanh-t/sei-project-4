@@ -34,7 +34,7 @@ const ForumCard = ({ id, title, comments }) => {
   }
 
   return (
-    <div className="ui segment single-forum-container">
+    <div className="ui container single-forum-container">
       
       <h2 className="ui left floated header">{title}</h2>
       <div className="ui clearing divider"></div>

@@ -19,7 +19,7 @@ const Forum = () => {
   
   return (
     <>
-      <h1>Join the community!</h1>
+      <h1 className="headers">Join the community!</h1>
       <div className="main-forum-container">
         { categories.map((category, i) => (
         

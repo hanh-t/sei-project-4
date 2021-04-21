@@ -57,11 +57,13 @@ const UserProfile = () => {
             <h2 className="headers">Email: {email}</h2>
             <h2 className="headers">Username: {username}</h2>
             <h2 className="headers">Total points: {points}</h2>
-       
+          </div>
+          <div className="edit-user-button">
             <Link to={`/auth/profile/${params.id}/edit`}>
-              <button className="ui icon right labeled standard basic button"><i aria-hidden="true" className="edit icon"></i>Edit profile</button>
+              <button className="ui inverted icon right labeled standard basic button"><i aria-hidden="true" className="edit icon"></i>Edit profile</button>
             </Link>
           </div>
+          
         </div>
         <div className="user-saved-resources">
           <h2 className="headers">Saved resources</h2>
@@ -70,7 +72,9 @@ const UserProfile = () => {
       </div>
       
       <div className="user-quote">
+        
         <h3 className="headers">{randomQuote}</h3>
+        
       </div>
     </>
   )
