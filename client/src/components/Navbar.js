@@ -17,36 +17,36 @@ const Navbar = () => {
       <div className="ui inverted menu navbar-menu">
         <div className="header item">
           <Link to="/">
-          Home
+          HOME
           </Link>
         </div>
 
         <div className="right menu">
           <div className="item">
             <Link to="/resources">
-              Resources
+              RESOURCES
             </Link>
           </div>
           { userIsAuthenticated() &&
           <>
             <div className="item">
               <Link to="/categories/community">
-            Community
+            COMMUNITY
               </Link>
             </div>
             <div className="item">
               <Link to="/habits">
-            Tracker
+            TRACKER
               </Link>
             </div>
             <div className="item">
               <Link to={`auth/profile/${userID()}`}>
-            Profile
+            PROFILE
               </Link>
             </div>
             <div className="item">
               <Link to={`resources/${params.id}/cart/`}>
-            Cart
+            CART
               </Link>
             </div>
           </>
@@ -57,20 +57,20 @@ const Navbar = () => {
             <div className="item">
               <Link to='/auth/register'>
                 {/* <i className="sign in alternate icon"></i> */}
-                Register
+                REGISTER
               </Link>
             </div>
             <div className="item">
               <Link to='/auth/login'>
                 {/* <i className="sign in alternate icon"></i> */}
-                Login
+                LOGIN
               </Link>
             </div>
           </>
           }
           { userIsAuthenticated() &&
           <div className="item">
-            <a className="button" onClick={handleLogout}> Log out</a>
+            <a className="button" onClick={handleLogout}> LOG OUT</a>
           </div>
           }
         </div>
