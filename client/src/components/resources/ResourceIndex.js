@@ -21,7 +21,7 @@ const Resources = () => {
     setFilterResources(filteredArray)  
   }
 
-
+  
 
   console.log('FILTER RESOURCE', filterResources)
   if (!resources) return ''
@@ -33,7 +33,6 @@ const Resources = () => {
       </div>
       <div className="resource-dropdown">
         <select id="dropdown-resources" onChange={filteredResources}>
-          <option value='--'>--</option>
           <option value="All">All</option>
           <option value="Article">Article</option>
           <option value="Book">Book</option>
@@ -41,19 +40,19 @@ const Resources = () => {
           <option value="Video">Video</option>
         </select>
       </div>
-  
-      <div className="resource-card-container">
-        {resources.map(resource => ( 
-          <ResourceCard key={resource.id} {...resource} />
-        ))}
-      </div>
-        
-      <div className="resource-filter-container">
-        {filterResources.map(resource => ( 
-          <ResourceCard key={resource.id} {...resource} />
-        ))}
-      </div>
-        
+      { filterResources.length === 0 ?
+        <div className="resource-card-container">
+          {resources.map(resource => ( 
+            <ResourceCard key={resource.id} {...resource} />
+          ))}
+        </div>
+        :
+        <div className="resource-filter-container">
+          {filterResources.map(resource => ( 
+            <ResourceCard key={resource.id} {...resource} />
+          ))}
+        </div>
+      }
       
     
       
