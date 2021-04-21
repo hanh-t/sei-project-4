@@ -39,13 +39,13 @@ const UserProfile = () => {
   console.log('DATA1', userData)
   console.log('DATA2', resources)
 
-  const { username, fullName, email, profileImage, points, wishlist } = userData
+  const { username, fullName, email, points, wishlist } = userData
 
 
   return (
     <>
       <div className="user-hero-section">
-        {profileImage}
+        <img src="https://icon-library.net/images/avatar-icon-images/avatar-icon-images-6.jpg" className="ui medium circular image"></img>
       </div>
       <div className="ui horizontal divider"><h1 className="headers">{`Great to see you again, ${username}!`}</h1></div>
 

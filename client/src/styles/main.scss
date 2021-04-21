@@ -17,7 +17,7 @@ body,
 }
 
 #root {
-  height: 100vh;
+  // height: 100%;
 //   background: #457fca;  /* fallback for old browsers */
 // background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
 // background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -288,16 +288,48 @@ h6.category-on-habit {
 
 .main-forum-container {
   margin: 9vw;
+  color: black;
+  // overflow: auto;
+  // width: 60vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20vw;
+  
+  
 }
 
-// .single-forum-container {
-//   border: 1px solid red;
-// }
+.ui.segment.single-forum-container {
+  width: 60vw;
+  opacity: 0.9;
+}
+.ui.left.floated.header.headers {
+  font-family: 'Nunito Sans', sans-serif;
+}
 
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1vw;
+}
 
+.ui.input.comment-add {
+  width: 40vw;
+}
+
+.ui.basic.button.comment-edit {
+  margin-left: 1vw;
+}
+
+.with-edit-button {
+  display: flex;
+  justify-content: space-between;
+}
 // user profile
 .user-hero-section {
-  height: 25vh;
+  // height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .ui.horizontal.divider h1 {
