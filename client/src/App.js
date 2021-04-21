@@ -17,6 +17,7 @@ import EditHabit from './components/habits/EditHabit'
 import Forum from './components/forum/Forum'
 import EditComment from './components/forum/EditComment'
 import IntroTracker from './components/habits/IntroTracker'
+import Cart from './components/resources/Cart'
 
 
 const App = () => {
@@ -69,8 +70,11 @@ const App = () => {
         <Route  exact path="/resources">
           <ResourceIndex />
         </Route>
-        <Route  path="/resources/:id">
+        <Route  exact path="/resources/:id">
           <UserData />
+        </Route>
+        <Route  path="/resources/:id/cart">
+          <Cart />
         </Route>
       </Switch>
       <Footer />

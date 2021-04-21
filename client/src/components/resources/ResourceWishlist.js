@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../../helpers/auth'
+import { useHistory } from 'react-router-dom'
 
 const ResourceWishlist = ({ userData, resource }) => {
-  console.log('USER', userData)
+  // console.log('USER', userData)
+
+  const  history = useHistory()
+  
   if (!userData) return ''  
 
   const [wishlist] =  useState({
@@ -26,8 +30,10 @@ const ResourceWishlist = ({ userData, resource }) => {
     )
   }
 
-  const handlePurchase = (event) => {
-    console.log('CLICK', event.target.value)
+  const handlePurchase = () => {
+    // console.log('CLICK', event.target.value)
+    history.push(`/resources/${resource.id}/cart/`)
+    location.reload()
   }
 
   return (

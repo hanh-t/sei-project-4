@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700');
 
 html,
 body,
@@ -146,6 +146,153 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+
+// cart
+
+.cart {
+  width: 70vw;
+  margin-left: 13vw;
+  margin-top: 5vh;
+}
+
+.cart {
+
+
+  .items {
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 1.5em;
+    border-bottom: 1px solid #fafafa;
+    &.even {
+      background: #fafafa;
+    }
+    .infoWrap {
+      display: table;
+      width: 100%;
+    }
+    .cartSection {
+      display: table-cell;
+      vertical-align: middle;
+      
+      
+      .itemNumber {
+  font-size: .75em;
+        color: #777;
+        margin-bottom: .5em;
+}
+      
+      h3 {
+        font-size: 1em;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .025em;
+        color: black;
+
+      }
+      p {
+        display: inline-block;
+        font-size: .85em;
+        
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+            .quantity {
+        font-weight: bold;
+              color: #333;
+      }
+        
+        &.stockStatus {
+          color: #82CA9C;
+          font-weight: bold;
+          padding: .5em 0 0 1em;
+          text-transform: uppercase;
+          &.out {
+            color: #F69679;
+          }
+        }
+        
+      }
+      .itemImg {
+        width: 4em;
+        float: left;
+      }
+      &.qtyWrap , &.prodTotal {
+        text-align: center;
+    p {
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+      }
+      
+    input.qty {
+        width: 2em;
+        text-align: center;
+        font-size: 1em;
+          padding: .25em;
+      margin: 1em .5em 0 0;
+        
+      }
+      .itemImg {
+        width: 8em;
+        display: inline;
+        padding-right: 1em;
+      }
+    }
+  }
+  
+}   
+
+.subtotal {
+  float: right;
+   width: 35%;
+   margin-right: 20vw;
+    .totalRow {
+      padding: .5em;
+      text-align: right;
+    
+      &.final {
+        font-size: 1.25em;
+        font-weight: bold;
+      }
+      span {
+        display: inline-block;
+        padding: 0 0 0 1em;
+        text-align: right;
+       
+      }
+      .label {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: black;
+      }
+      .value {
+   
+        letter-spacing: -.025em;
+        width: 35%;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+    }
+  }
+  .totalRow.ui.inverted.basic.button {
+    margin-left: 27.2vw;
+  }
+
+  li {
+    list-style: none;
+    
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+
 
 // category list
 .category-container {
