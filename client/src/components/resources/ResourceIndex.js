@@ -33,24 +33,28 @@ const Resources = () => {
       </div>
       <div className="resource-dropdown">
         <select id="dropdown-resources" onChange={filteredResources}>
-          <option value="--">--</option>
+          <option value='--'>--</option>
+          <option value="All">All</option>
           <option value="Article">Article</option>
           <option value="Book">Book</option>
           <option value="Podcast">Podcast</option>
           <option value="Video">Video</option>
         </select>
       </div>
-      {/* <div className="resource-filter-container">
-        {filterResources.map(resource => ( 
-          <ResourceCard key={resource.id} {...resource} />
-        ))}
-      </div> */}
-        
+  
       <div className="resource-card-container">
         {resources.map(resource => ( 
           <ResourceCard key={resource.id} {...resource} />
         ))}
       </div>
+        
+      <div className="resource-filter-container">
+        {filterResources.map(resource => ( 
+          <ResourceCard key={resource.id} {...resource} />
+        ))}
+      </div>
+        
+      
     
       
     </>

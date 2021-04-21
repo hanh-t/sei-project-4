@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import ResourceWishlist from './ResourceWishlist'
 import { userIsAuthenticated } from '../../helpers/auth'
 
+
 const ResourceShow = ({ userData }) => {
   const params = useParams()
 

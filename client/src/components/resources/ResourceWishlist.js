@@ -16,7 +16,7 @@ const ResourceWishlist = ({ userData, resource }) => {
 
   const handleWishlist = async () =>{
     await axios.put(
-      `/api/auth/profile/${userData.id}/`,
+      `/api/auth/profile/${userData.id}/edit/`,
       wishlist
     )
   }
