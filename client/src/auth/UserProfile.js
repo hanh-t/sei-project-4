@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
+import SavedResources from './SavedResources'
 
 const UserProfile = () => {
   const [userData, setUserData] = useState('')
@@ -8,7 +9,6 @@ const UserProfile = () => {
   const params = useParams()
   const [quote, setQuote] = useState(null)
 
-  
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(`/api/auth/profile/${params.id}`)
@@ -28,7 +28,7 @@ const UserProfile = () => {
     getData()
   }, [])
 
-  if (!quote) return ''
+  if (!userData || !resources || !quote) return ''
 
   const mappedQuotes = quote.map(item => {
     return item.text
@@ -39,8 +39,15 @@ const UserProfile = () => {
   console.log('DATA1', userData)
   console.log('DATA2', resources)
 
-  const { username, fullName, email, points, wishlist } = userData
 
+  const { username, fullName, email, points } = userData
+
+  const filteredResources = resources.filter(item => {
+    return item.id === parseInt(userData.wishlist)
+  }) 
+  console.log('FILTERED>>>', filteredResources)
+
+  
 
   return (
     <>
@@ -67,7 +74,11 @@ const UserProfile = () => {
         </div>
         <div className="user-saved-resources">
           <h2 className="headers">Saved resources</h2>
-          <p>{wishlist}</p>
+       
+          { filteredResources.map(resource => (
+            <SavedResources key={resource.id} {...resource} />
+          ))}
+          {/* <p>{wishlist}</p> */}
         </div>
       </div>
       
