@@ -194,6 +194,12 @@ a:hover {
 }
 
 //  intro tracker page
+.no-habits {
+  text-align: center;
+  height: 30vh;
+  padding-top: 10vh;
+}
+
 .questions-for-user {
   display: flex;
   flex-direction: column;
@@ -367,7 +373,15 @@ h6.category-on-habit {
   margin-top: 5vh;
   display: flex;
   justify-content: center;
+}
 
+.saved-resources {
+  height: 30vh;
+  width: 50vw;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 .user-quote {

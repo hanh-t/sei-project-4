@@ -39,7 +39,7 @@ const IntroTracker = () => {
   const filteredArray = habits.filter(habit => {
     return habit.owner === userID()
   })
-
+  console.log('filtered array', filteredArray)
   const handleYes = (event) => {
     setPoints(points + parseInt(event.target.value))
   }
@@ -79,27 +79,36 @@ const IntroTracker = () => {
 
     <>
       <h1 className="headers">How did it go today?</h1>
-      <div className="questions-for-user">
-        { filteredArray.map((habit, i) => (
+      <div className="no-habits">
+        {filteredArray.length === 0 
+          ?
+          <h2 className="headers">Nothing saved yet. Get tracking!</h2>
+          :
           <>
-            <h2 key={habit.title} className="headers">{habit.title}, {habit.frequency}</h2>
+            { filteredArray.map((habit, i) => (
+              <div className="questions-for-user" key={i}>
+                <h2 key={habit.title} className="headers">{habit.title}, {habit.frequency}</h2>
           
-            <h6 key={i} className="category-on-habit">{habit.category}</h6>
-            <div className="intro-tracker-buttons">
-              <button onClick={handleYes} value="2" className="ui  basic button"> 👍 </button>
-              <button onClick={handleNo} value="0" className="ui basic button"> 👎 </button>
-            </div>
+                <h6 key={habit.category} className="category-on-habit">{habit.category}</h6>
+                <div className="intro-tracker-buttons">
+                  <button onClick={handleYes} value="2" className="ui  basic button"> 👍 </button>
+                  <button onClick={handleNo} value="0" className="ui basic button"> 👎 </button>
+                </div>
+              </div>
+            ))}
           </>
-        ))}
+        }
       </div>
-    
+  
       <div className="intro-points-button">
-        <span className="points-span">Another {points} points!</span>
-     
-      
-        {/* <Link to='/habits/'> */}
-        <button onClick={handleUpdatedPoints} className="ui basic button">Go to your main tracker page</button>
-        {/* </Link> */}
+        {filteredArray.length === 0 ?        
+          <button onClick={handleUpdatedPoints} className="ui basic button">Go to your main tracker page</button>
+          :
+          <>
+            <span className="points-span">Another {points} points!</span>
+            <button onClick={handleUpdatedPoints} className="ui basic button">Go to your main tracker page</button>
+          </>
+        }
       </div>
     </>
   )

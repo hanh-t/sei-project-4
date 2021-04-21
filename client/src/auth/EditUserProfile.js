@@ -39,7 +39,7 @@ const EditUserProfile = () => {
   }, [])
 
   const handleImageUrl = url =>{
-    setFormData({ ...formData, profilePic: url })
+    setFormData({ ...formData, profileImage: url })
   }
 
   const handleChange = event => {

@@ -5,9 +5,17 @@ const SavedResources = ({ title, resourceType, price }) => {
   return (
     <>
       <div className="saved-resources" >
-        <p>{title}</p>
+        
+        <div className="ui circular segment">
+        
+          <h2 className="ui header">{title}</h2>
+         
+        </div>
         <p>{resourceType}</p>
-        <p>Our price: {price} points</p>
+        <p className="sub header">{price} points</p>
+        {/* <p>{title}</p> */}
+        
+        
       </div>
     </>
   )

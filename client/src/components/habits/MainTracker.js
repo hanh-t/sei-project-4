@@ -86,7 +86,11 @@ const MainTracker = () => {
         </div>
         <div className="rewards-container">
           <h3 className="headers">REWARDS</h3>
-          <h3 className="headers">Keep at those habits and you will earn points towards resources on our site!</h3>
+          <h3 className="headers">Keep at those habits and you will earn points towards resources on our site!</h3> 
+          <h3 className="headers"> 🎉 45 points gets you most books on our site</h3>
+          <h3 className="headers"> 🎉 200 points gets you money off to see a talk of your choice</h3>
+          <h3 className="headers"> 🎉 More coming soon!</h3>
+          
         </div>
       </div>
       <div className="quote-container">

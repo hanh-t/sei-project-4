@@ -70,6 +70,14 @@ class UserDetailView(APIView):
             return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
         return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
+    # def put(self, request, pk):
+    #     user_to_edit = self.get_user(pk=pk)
+    #     updated_user = UserPartialSerializer(user_to_edit, data=request.data)
+    #     if updated_user.is_valid():
+    #         updated_user.save()
+    #         return Response(updated_user.data, status=status.HTTP_202_ACCEPTED)
+    #     return Response(updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
 # update points only when user tracks their progress on the frontend
 
 class UserPartialUpdateView(APIView):
