@@ -95,7 +95,7 @@ const MainTracker = () => {
         </div>
       </div>
       <div className="quote-container">
-        <h4 className="headers">{randomQuote}</h4>
+        <h2 className="headers">-----{randomQuote}-----</h2>
       </div>
 
     </>

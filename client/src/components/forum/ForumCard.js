@@ -9,12 +9,12 @@ const ForumCard = ({ id, title, comments }) => {
 
   const history = useHistory()
   
-  const avatarArray = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYAmVcHsv6_lKgGVvBQUTB5JJAHGpsIp_7EMBdwXtW_fYNKUKhyzcIskNmG0_apzs77A0&usqp=CAU', 
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMJqP6-JNuGfYB5nB0xWj8I7flEDM25EenyJGZm3Hs0EbkvhwgFOT8Y0-Km5JH7cKkeJE&usqp=CAU', 
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsKC14CydUN16Ns6NQFyrQmjgbru-7SjeFOzr7cO8vxWSlG0wUW3G0VFxZvpqb5OFT0A&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcdB6XgbxDa_twWbER4F3jOgVMJZ_-XkmHdNGbrOp5swyBXbwhGch1s3e2SQiEpqSrs48&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NayGxNb6pM5dyJJBcjzP6yeCXrN_nzA29Gj_OHXqRkv1GzOBQ8xS--u5DTKXFljBMJU&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjVba6ga7rXEycupCCkQsmNeJfrBC_ZfEfUbS5E_lgjorO6YE8abAIsqZrruQD6k811gs&usqp=CAU']
+  // const avatarArray = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYAmVcHsv6_lKgGVvBQUTB5JJAHGpsIp_7EMBdwXtW_fYNKUKhyzcIskNmG0_apzs77A0&usqp=CAU', 
+  //   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMJqP6-JNuGfYB5nB0xWj8I7flEDM25EenyJGZm3Hs0EbkvhwgFOT8Y0-Km5JH7cKkeJE&usqp=CAU', 
+  //   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsKC14CydUN16Ns6NQFyrQmjgbru-7SjeFOzr7cO8vxWSlG0wUW3G0VFxZvpqb5OFT0A&usqp=CAU',
+  //   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcdB6XgbxDa_twWbER4F3jOgVMJZ_-XkmHdNGbrOp5swyBXbwhGch1s3e2SQiEpqSrs48&usqp=CAU',
+  //   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2NayGxNb6pM5dyJJBcjzP6yeCXrN_nzA29Gj_OHXqRkv1GzOBQ8xS--u5DTKXFljBMJU&usqp=CAU',
+  //   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjVba6ga7rXEycupCCkQsmNeJfrBC_ZfEfUbS5E_lgjorO6YE8abAIsqZrruQD6k811gs&usqp=CAU']
 
   const [input, setInput] = useState({
     text: '',
@@ -40,7 +40,7 @@ const ForumCard = ({ id, title, comments }) => {
     location.reload()
   }
 
-  const randomImage = avatarArray[Math.floor(Math.random() * avatarArray.length)]
+  // const randomImage = avatarArray[Math.floor(Math.random() * avatarArray.length)]
 
   return (
     <>
@@ -55,7 +55,7 @@ const ForumCard = ({ id, title, comments }) => {
             <div className="comment">
               {/* <h3 key={text}>{text}</h3> */}
               <a className="avatar">
-                <img src={randomImage} />
+                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" />
               </a>
               <div className="with-edit-button">
                 <div className="comment-container">

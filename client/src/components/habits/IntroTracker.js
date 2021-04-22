@@ -102,11 +102,11 @@ const IntroTracker = () => {
   
       <div className="intro-points-button">
         {filteredArray.length === 0 ?        
-          <button onClick={handleUpdatedPoints} className="ui basic button">Go to your main tracker page</button>
+          <button onClick={handleUpdatedPoints} className="ui inverted icon right labeled button"><i aria-hidden="true" className="angle double right icon"></i>  Go to your main tracker page</button>
           :
           <>
             <span className="points-span">Another {points} points!</span>
-            <button onClick={handleUpdatedPoints} className="ui basic button">Go to your main tracker page</button>
+            <button onClick={handleUpdatedPoints} className="ui inverted basic button">Go to your main tracker page</button>
           </>
         }
       </div>

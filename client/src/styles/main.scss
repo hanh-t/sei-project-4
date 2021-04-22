@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap'); 
 
 html,
 body,
@@ -38,6 +39,7 @@ h2 {
 
 .headers {
   font-family: 'Nunito Sans', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
   padding-top: 15px;
 }
 
@@ -485,7 +487,12 @@ select {
 
   text-align: center;
   padding-top:10vh;
-  
+  margin-left: 10vw;
+  margin-right: 10vw;
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+  }
 }
 
 
@@ -569,6 +576,8 @@ h6.category-on-habit {
   justify-content: space-evenly;
   margin-top: 30px;
   height: 45vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .edit-user-button {
@@ -583,6 +592,14 @@ h6.category-on-habit {
   overflow-x: auto;
   display: flex;
   flex-direction: column;
+  .ui.circular.segment {
+    p {
+      color: black;
+      // padding-top: 3px;
+    
+    }
+   
+  }
  
 }
 
@@ -590,11 +607,15 @@ h6.category-on-habit {
 
 .user-quote {
   display: flex;
-  width: 60vw;
+  flex-direction: column;
+  // width: 60vw;
   text-align: center;
-  margin-left: 23vw;
-  h3 {
+  margin-left: 12vw;
+  margin-right: 12vw;
+  h2 {
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
   }
 }
 .user-info {
@@ -611,14 +632,14 @@ h6.category-on-habit {
 }
 
 .user-section {
-  width: 33%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .order-info {
-  width: 33%;
+  width: 30%;
 }
 
 // footer

@@ -1,19 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SavedResources = ({ title, resourceType, price }) => {
  
   return (
     <>
       <div className="saved-resources" >
-        
-        <div className="ui circular segment">
+
+        <Link to="/resources/">
+          <div className="ui  circular segment">
+            <p>{resourceType}</p>
+            <h2 className="ui header">{title}</h2>
+            <p className="sub header">{price} points</p>
           
-          <h2 className="ui header">{title}</h2>
-        
-        </div>
-        <p>{resourceType}</p>
-        <p className="sub header">{price} points</p>
-        {/* <p>{title}</p> */}
+          </div>
+        </Link>
         
         
       </div>

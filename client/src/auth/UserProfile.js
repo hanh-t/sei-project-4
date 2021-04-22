@@ -74,7 +74,6 @@ const UserProfile = () => {
         </div>
         <div className="user-saved-resources">
           <h2 className="headers">SAVED RESOURCES</h2>
-       
           { filteredResources.map(resource => (
             <SavedResources key={resource.id} {...resource} />
           ))}
@@ -91,7 +90,7 @@ const UserProfile = () => {
 
       <div className="user-quote">
         
-        <h3 className="headers">{randomQuote}</h3>
+        <h2 className="headers">-----{randomQuote}-----</h2>
         
       </div>
     </>
