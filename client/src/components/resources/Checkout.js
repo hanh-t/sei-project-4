@@ -17,7 +17,7 @@ const Checkout = () => {
     }
     getData()
   }, [])
-  console.log('RESOURCE', resource)
+  console.log('RESOURCE>>>>', resource)
 
   useEffect(() => {
     const getData = async () => {

@@ -4,7 +4,7 @@ const EditCommentForm = ({ handleChange, handleSubmit, formData }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="ui reply form">
+      <form onSubmit={handleSubmit} className="ui reply form edit-habit">
         <div className="field " >
           <label className="label">Text</label>
           <input

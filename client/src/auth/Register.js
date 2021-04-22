@@ -62,7 +62,7 @@ const Register = () => {
       <h1 className="headers">Sign up</h1>
       <div className="register-container">
         <div className="register-info">
-          <h2>Ready to get your habits back on track?</h2>
+          <h2 className="headers">Ready to get your habits back on track?</h2>
 
         </div>
 
