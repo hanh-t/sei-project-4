@@ -101,7 +101,7 @@ const Checkout = () => {
         </div>
 
         <div className="buy-btn">
-          <Link to={`/auth/profile/${userID()}`}>
+          <Link to={`/auth/profile/${userID()}/orders/`}>
             <button className="ui inverted basic icon right labeled button"><i aria-hidden="true" className="shopping bag icon"></i>BUY</button>
           </Link>
         </div>

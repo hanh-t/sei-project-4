@@ -460,6 +460,7 @@ select {
 	   -moz-box-shadow: 0 10px 6px -6px #777;
           box-shadow: 0 10px 6px -6px #777;
   background-color: #ada0a6;
+  opacity: 0.8;
 }
 
 
@@ -680,8 +681,17 @@ h6.category-on-habit {
  
 }
 
+.ui.card.order h3 {
+  color: black;
+  text-align: center;
+}
 
-
+.order-container {
+  width: 60vw;
+  height: 50vh;
+  margin-left: 20vw;
+  margin-top: 10vh;
+}
 .user-quote {
   display: flex;
   flex-direction: column;

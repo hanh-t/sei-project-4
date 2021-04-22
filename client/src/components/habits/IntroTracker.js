@@ -79,26 +79,30 @@ const IntroTracker = () => {
 
     <>
       <h1 className="headers">How did it go today?</h1>
-      <div className="no-habits">
-        {filteredArray.length === 0 
-          ?
+      
+      {filteredArray.length === 0 
+        ?
+        <div className="no-habits">
           <h2 className="headers">Nothing saved yet. Get tracking!</h2>
-          :
-          <>
+        </div>
+        :
+        <>
+          <div className="with-habits">
             { filteredArray.map((habit, i) => (
               <div className="questions-for-user" key={i}>
                 <h2 key={habit.title} className="headers">{habit.title}, {habit.frequency}</h2>
           
                 <h6 key={habit.category} className="category-on-habit">{habit.category}</h6>
                 <div className="intro-tracker-buttons">
-                  <button onClick={handleYes} value="2" className="ui  basic button"> 👍 </button>
-                  <button onClick={handleNo} value="0" className="ui basic button"> 👎 </button>
+                  <button onClick={handleYes} value="2" className="ui inverted basic button"> 👍 </button>
+                  <button onClick={handleNo} value="0" className="ui inverted basic button"> 👎 </button>
                 </div>
               </div>
             ))}
-          </>
-        }
-      </div>
+          </div>
+        </>
+      }
+      
   
       <div className="intro-points-button">
         {filteredArray.length === 0 ?        

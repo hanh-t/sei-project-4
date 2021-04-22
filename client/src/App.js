@@ -18,6 +18,7 @@ import Forum from './components/forum/Forum'
 import EditComment from './components/forum/EditComment'
 import IntroTracker from './components/habits/IntroTracker'
 import Cart from './components/resources/Cart'
+import Orders from './components/resources/Orders'
 // import Checkout from './components/resources/Checkout'
 
 
@@ -34,6 +35,9 @@ const App = () => {
         </Route>
         <Route   exact path="/auth/profile/:id">
           <UserProfile />
+        </Route>
+        <Route    path="/auth/profile/:id/orders">
+          <Orders />
         </Route>
         <Route  path="/auth/register">
           <Register />

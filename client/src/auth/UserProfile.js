@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import SavedResources from './SavedResources'
-import Orders from '../components/resources/Orders'
+// import Orders from '../components/resources/Orders'
 
 const UserProfile = () => {
   const [userData, setUserData] = useState('')
@@ -84,7 +84,6 @@ const UserProfile = () => {
         <div className="order-info">
           <h2 className="headers">ORDERS</h2>
           <h2 className="headers">Nothing to see here just yet. Check out the RESOURCES page ✌️ </h2>
-          <Orders />
         </div>
 
       </div>
