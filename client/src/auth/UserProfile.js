@@ -57,7 +57,7 @@ const UserProfile = () => {
       <div className="ui horizontal divider"><h1 className="headers">{`Great to see you again, ${username}!`}</h1></div>
 
       <div className="main-user-section">
-        <div >
+        <div className="user-section">
           <div className="user-info">
             
             <h2 className="headers">Full Name: {fullName}</h2>
@@ -73,15 +73,22 @@ const UserProfile = () => {
           
         </div>
         <div className="user-saved-resources">
-          <h2 className="headers">Saved resources</h2>
+          <h2 className="headers">SAVED RESOURCES</h2>
        
           { filteredResources.map(resource => (
             <SavedResources key={resource.id} {...resource} />
           ))}
           {/* <p>{wishlist}</p> */}
         </div>
+
+        <div className="order-info">
+          <h2 className="headers">ORDERS</h2>
+          <h2 className="headers">Nothing to see here just yet. Check out the RESOURCES page ✌️ </h2>
+        </div>
+
       </div>
       
+
       <div className="user-quote">
         
         <h3 className="headers">{randomQuote}</h3>
