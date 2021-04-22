@@ -18,7 +18,7 @@ import Forum from './components/forum/Forum'
 import EditComment from './components/forum/EditComment'
 import IntroTracker from './components/habits/IntroTracker'
 import Cart from './components/resources/Cart'
-import Checkout from './components/resources/Checkout'
+// import Checkout from './components/resources/Checkout'
 
 
 const App = () => {
@@ -74,12 +74,13 @@ const App = () => {
         <Route  exact path="/resources/:id">
           <UserData />
         </Route>
+       
         <Route  exact path="/resources/:id/cart">
           <Cart />
         </Route>
-        <Route   path="/resources/:id/checkout">
+        {/* <Route   exact path="/resources/:id/cart/checkout">
           <Checkout />
-        </Route>
+        </Route> */}
       </Switch>
       <Footer />
     </BrowserRouter>

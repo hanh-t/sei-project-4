@@ -313,8 +313,35 @@ select {
     
   }
 
+  .checkout {
+    margin-top: 200px;
+    text-align: center;
+  }
 
+  .checkout-form {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    border: 1px solid white;
+    padding-bottom: 3vh;
+    padding-top: 1vh;
+  }
+  .buy-btn {
+    display: flex;
+    margin-top: 3vh;
+    button {
+      width: 150px;
+    }
+  }
+  .checkout-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .details, .payment {
+    width: 30%;
+  }
 // category list
 .main-cat-container {
   display: flex;

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 // import ResourceCard from './ResourceCard'
-import { useParams, Link, useHistory } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import axios from 'axios'
+import Checkout from './Checkout'
 
 const Cart = () => {
 
@@ -68,10 +69,15 @@ const Cart = () => {
           <li className="totalRow final"><span className="label">Total</span><span className="value"> £5.00</span></li>
           
         </ul>
-        <Link to={`/api/resources/${params.id}/checkout/`}>
-          <button className="totalRow ui inverted basic button">CHECKOUT</button>
-        </Link>
-        <button onClick={handleCancel} className="ui basic button">Cancel</button>
+        {/* <Link to={`/api/resources/${params.id}/cart/checkout/`}> */}
+        {/* <a className="down-link" href="#donations"><i aria-hidden="true" className="angle double down link huge icon" ></i></a> */}
+        <button  className="totalRow ui inverted basic button">CHECKOUT</button>
+        {/* </Link> */}
+
+        <button onClick={handleCancel} className="ui inverted basic button">Cancel</button>
+      </div>
+      <div className="checkout">
+        <Checkout />
       </div>
     </>
   )
