@@ -21,7 +21,7 @@ const Cart = () => {
   console.log('RESOURCE', resource)
 
   const handleCancel = () => {
-    history.push('/resources/')
+    history.push('/')
     location.reload()
   }
  
@@ -72,10 +72,12 @@ const Cart = () => {
           </ul>
           {/* <Link to={`/api/resources/${params.id}/cart/checkout/`}> */}
           {/* <a className="down-link" href="#donations"><i aria-hidden="true" className="angle double down link huge icon" ></i></a> */}
-          <a href="#checkout" className="totalRow ui inverted basic button">CHECKOUT</a>
-          {/* </Link> */}
-
-          <button onClick={handleCancel} className="ui inverted basic button">Cancel</button>
+          <div className="cart-btns">
+            <a href="#checkout" className="totalRow ui inverted basic button">CHECKOUT</a>
+            {/* </Link> */}
+       
+            <button onClick={handleCancel} className="ui inverted basic button cancel">Cancel</button>
+          </div>
         </div>
 
         <div className="middle-page">

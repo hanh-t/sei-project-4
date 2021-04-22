@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
+import { userID } from '../../helpers/auth'
 
 const Checkout = () => {
 
   const params = useParams()
 
   const [resource, setResource] = useState(null)
+  const [userData, setUserData] = useState('')
 
   useEffect(() => {
     const getData = async() => {
@@ -16,6 +18,16 @@ const Checkout = () => {
     getData()
   }, [])
   console.log('RESOURCE', resource)
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get(`/api/auth/profile/${userID()}`)
+      setUserData(data)
+    }
+    getData()
+  }, [])
+
+  console.log('USER', userData)
 
   return (
     <>
@@ -87,8 +99,11 @@ const Checkout = () => {
           </div>
           
         </div>
+
         <div className="buy-btn">
-          <button className="ui inverted basic icon right labeled button"><i aria-hidden="true" className="shopping bag icon"></i>BUY</button>
+          <Link to={`/auth/profile/${userID()}`}>
+            <button className="ui inverted basic icon right labeled button"><i aria-hidden="true" className="shopping bag icon"></i>BUY</button>
+          </Link>
         </div>
       </div>
     </>
