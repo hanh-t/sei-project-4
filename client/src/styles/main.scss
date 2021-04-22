@@ -114,6 +114,7 @@ a:hover {
 
 .resource-card-container a, .resource-filter-container a {
   margin: 10px;
+  margin-top: 2vh;
 }
 
 .resource-dropdown {
@@ -122,9 +123,24 @@ a:hover {
   justify-content: flex-end;
   margin-right: 12vw;
   margin-top: 3vh;
+  
+  select:focus {
+    outline: 0;
+  border-style: none;
+  }
 }
+
+select {
+  border-radius: 6px;
+  width: 10vw;
+  height: 3vh;
+  // text-align: center;
+}
+
+
 .ui.card {
   height: 120px;
+  opacity: 0.9;
 
 }
 
@@ -295,12 +311,18 @@ a:hover {
 
 
 // category list
+.main-cat-container {
+  display: flex;
+  justify-content: center;
+  // width: 70vw;
+}
 .category-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 60vw;
-  padding-left: 10vw;
+  width: 55vw;
+  margin-top: 4vh;
+  // padding-left: 10vw;
   :hover{
     animation: animate__pulse;
     animation-duration: 5s;
@@ -323,6 +345,7 @@ a:hover {
 //   margin: -2em;
 // }
 .cat-container {
+
   :hover{
     animation: animate__pulse;
     animation-duration: 5s;
