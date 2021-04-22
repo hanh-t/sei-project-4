@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 // import ResourceCard from './ResourceCard'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 const Cart = () => {
 
   const params = useParams()
+  const history = useHistory()
 
   const [resource, setResource] = useState(null)
 
@@ -17,6 +18,12 @@ const Cart = () => {
     getData()
   }, [])
   console.log('RESOURCE', resource)
+
+  const handleCancel = () => {
+    history.push('/resources/')
+    location.reload()
+  }
+ 
 
   if (!resource) return ''
 
@@ -64,6 +71,7 @@ const Cart = () => {
         <Link to={`/api/resources/${params.id}/checkout/`}>
           <button className="totalRow ui inverted basic button">CHECKOUT</button>
         </Link>
+        <button onClick={handleCancel} className="ui basic button">Cancel</button>
       </div>
     </>
   )
