@@ -317,6 +317,10 @@ select {
     margin-top: 200px;
     text-align: center;
   }
+  .whole-page-cart {
+    overflow-y: auto;
+    height: 70vh;
+  }
 
   .checkout-form {
     display: flex;
@@ -332,6 +336,9 @@ select {
     button {
       width: 150px;
     }
+  }
+  .middle-page {
+    height: 700px;
   }
   .checkout-form-container {
     display: flex;

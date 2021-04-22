@@ -82,12 +82,8 @@ const Checkout = () => {
                   <label>CVV</label>
                   <input placeholder="123" />
                 </div>
-
-    
               </div>
-             
             </form>
-           
           </div>
           
         </div>
