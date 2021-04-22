@@ -138,7 +138,7 @@ const Register = () => {
                 </div>
                 <div className="field">
                 </div>
-                <button onClick={handleRegisterConfirmation} type="submit" value="Registration successful!" className="ui basic submit button"> Sign me up!</button><br/>
+                <button onClick={handleRegisterConfirmation} type="submit" value="Registration successful!" className="ui inverted icon right labeled button"><i aria-hidden="true" className="check right icon"></i> Sign me up!</button><br/>
                 <span className="registerConfirmBox"><p>{confirmMessage}</p></span>
               </form>
             </div>

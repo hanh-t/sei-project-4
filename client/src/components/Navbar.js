@@ -17,7 +17,12 @@ const Navbar = () => {
       <div className="ui inverted menu navbar-menu">
         <div className="header item">
           <Link to="/">
-          HABITUP
+          HABITUP 
+          </Link>
+        </div>
+        <div className="item">
+          <Link to="/">
+            <i className="home icon"></i> 
           </Link>
         </div>
 

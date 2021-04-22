@@ -78,7 +78,7 @@ const IntroTracker = () => {
   return (
 
     <>
-      <h1 className="headers">How did it go today?</h1>
+      <h1 className="headers">HOW DID IT GO TODAY?</h1>
       
       {filteredArray.length === 0 
         ?

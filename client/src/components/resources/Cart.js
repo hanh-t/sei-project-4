@@ -31,8 +31,8 @@ const Cart = () => {
 
   return (
     <>
-      <div>
-        <h1>CART</h1>
+      <div className="cart-header">
+        <h1 className="headers">CART</h1>
       </div>
       <div className="whole-page-cart">
         <div className="cart">

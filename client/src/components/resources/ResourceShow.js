@@ -48,9 +48,9 @@ const ResourceShow = ({ userData }) => {
             <h2 className="headers">How to view/where to find: {resource.url}</h2>
           }
           { userIsAuthenticated() ? 
-            <h3>Our cost: {resource.price} points</h3>
+            <h3 className="headers">Our cost: {resource.price} points</h3>
             :
-            <p>Login to see our price</p>
+            <h3 className="headers">Login to see our price</h3>
           }
         
         </div>
