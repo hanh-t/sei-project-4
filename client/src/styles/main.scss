@@ -67,6 +67,9 @@ a:hover {
   // background: #5691c8;  /* fallback for old browsers */
   // background-color: #b08968 !important;  /* Chrome 10-25, Safari 5.1-6 */
   opacity: 0.5;
+  position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
   
 }
 
