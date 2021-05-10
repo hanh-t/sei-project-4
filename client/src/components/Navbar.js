@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, useHistory, useParams } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { userID, userIsAuthenticated } from '../helpers/auth'
 
 const Navbar = () => {
   const history = useHistory()
-  const params = useParams()
+
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
@@ -47,11 +47,6 @@ const Navbar = () => {
             <div className="item">
               <Link to={`auth/profile/${userID()}`}>
             PROFILE
-              </Link>
-            </div>
-            <div className="item">
-              <Link to={`resources/${params.id}/cart/`}>
-            CART
               </Link>
             </div>
           </>

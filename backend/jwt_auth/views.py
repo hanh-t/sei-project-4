@@ -8,7 +8,8 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 
-from .serializers.common import UserSerializer, UserPartialSerializer
+from .serializers.common import UserSerializer
+# UserPartialSerializer
 # from .serializers.populated import PopulatedUserSerializer
 
 User = get_user_model()
@@ -80,20 +81,20 @@ class UserDetailView(APIView):
 
 # update points only when user tracks their progress on the frontend
 
-class UserPartialUpdateView(APIView):
+# class UserPartialUpdateView(APIView):
 
-    # def get_user(self, pk):
-    #     try:
-    #         return User.objects.get(pk=pk)
-    #     except User.DoesNotExist:
-    #         raise NotFound(detail="🚨 Cannot find that user")
+#     def get_user(self, pk):
+#         try:
+#             return User.objects.get(pk=pk)
+#         except User.DoesNotExist:
+#             raise NotFound(detail="🚨 Cannot find that user")
     
-    def patch(self, request, pk):
-        user_partial_update = User.objects.get(pk=pk)
-        partially_updated_user = UserPartialSerializer(user_partial_update, data=request.data, partial=True)
-        if partially_updated_user.is_valid():
-            partially_updated_user.save()
-            return Response(partially_updated_user.data, status=status.HTTP_202_ACCEPTED)
-        return Response(partially_updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+#     def patch(self, request, pk):
+#         user_partial_update = User.objects.get(pk=pk)
+#         partially_updated_user = UserPartialSerializer(user_partial_update, data=request.data, partial=True)
+#         if partially_updated_user.is_valid():
+#             partially_updated_user.save()
+#             return Response(partially_updated_user.data, status=status.HTTP_202_ACCEPTED)
+#         return Response(partially_updated_user.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
 

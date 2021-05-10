@@ -17,7 +17,7 @@ const EditComment = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(`/api/comments/${params.id}/`)
+      const response = await axios.get('/api/comments/')
       setFormData(response.data)
     }
     getData()

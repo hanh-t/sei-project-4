@@ -52,12 +52,12 @@ const MainTracker = () => {
     setCalendarDate(calendarDate)
   }
 
-  const tileClassName = ({ date, view }) => view === 
-    'month' && date === calendarDate ? 'clicked' : null
+  // const tileClassName = ({ date, view }) => view === 
+  //   'month' && date === calendarDate ? 'clicked' : null
 
   
 
-  console.log('TILE', tileClassName)
+  // console.log('TILE', tileClassName)
   return (
     <>
       <h1 className="headers">YOUR HABITS</h1>

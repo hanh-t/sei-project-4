@@ -36,9 +36,7 @@ const App = () => {
         <Route   exact path="/auth/profile/:id">
           <UserProfile />
         </Route>
-        <Route    path="/auth/profile/:id/orders">
-          <Orders />
-        </Route>
+       
         <Route  path="/auth/register">
           <Register />
         </Route>
@@ -58,7 +56,7 @@ const App = () => {
         <Route exact path="/categories/:id">
           <AddHabitForm />
         </Route>
-        <Route path="/comments/:id">
+        <Route path="/comments/:id/edit">
           <EditComment />
         </Route>
         
@@ -81,6 +79,9 @@ const App = () => {
        
         <Route  exact path="/resources/:id/cart">
           <Cart />
+        </Route>
+        <Route    path="/resources/:id/orders">
+          <Orders />
         </Route>
         {/* <Route   exact path="/resources/:id/cart/checkout">
           <Checkout />

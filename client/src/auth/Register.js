@@ -17,13 +17,14 @@ const Register = () => {
   })
 
   const [errors, setErrors] = useState({
-    fullName: '',
-    username: '',
     email: '',
+    fullName: '',
     password: '',
+    username: '',
     password_confirmation: '',
   })
   console.log(errors, setErrors)
+  // console.log('ERROR', errors.response)
 
   const handleImageUrl = url =>{
     setFormData({ ...formData, profilePic: url })
@@ -47,7 +48,7 @@ const Register = () => {
       
     } catch (err) {
       console.log(err.response)
-      setErrors(err.response.data.errors)
+      setErrors(err.response.request.response)
     }
   }
 
@@ -73,36 +74,33 @@ const Register = () => {
                 <div className="field">
                   <label>Full Name</label>
                   <input
-                    className={`input ${errors.fullName ? 'is-danger' : ''}`}
+                    className="input"
                     placeholder="Full Name"
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
                   />
-                  { errors.fullName && <p className="help is-danger">{errors.fullName.message}</p> }
                 </div>
                 <div className="field">
                   <label>Email</label>
                   <input
-                    className={`input ${errors.email ? 'is-danger' : ''}`}
+                    className="input"
                     type="email"
                     placeholder="email@example.com"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                   />
-                  { errors.email && <p className="help is-danger">{errors.email.message}</p> }
                 </div>
                 <div className="field">
                   <label>Username</label>
                   <input
-                    className={`input ${errors.username ? 'is-danger' : ''}`}
+                    className="input"
                     placeholder="Username (for display)"
                     name="username"
                     value={formData.username}
                     onChange={handleChange}
                   />
-                  { errors.username && <p className="help is-danger">{errors.username.message}</p> }
                 </div>
                 <div className="field">
                   <label>Profile Image</label>
@@ -115,30 +113,27 @@ const Register = () => {
                 <div className="field">
                   <label>Password</label>
                   <input
-                    className={`input ${errors.password ? 'is-danger' : ''}`}
+                    className="input"
                     type="password"
-                    placeholder="Password"
+                    placeholder="Password must be at least 8 characters"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
                   />
-                  { errors.password && <p className="help is-danger">{errors.password.message}</p> }
                 </div>
                 <div className="field">
                   <label>Password Confirmation</label>
                   <input
-                    className={`input ${errors.passwordConfirmation ? 'is-danger' : ''}`}
                     type="password"
                     placeholder="Password Confirmation"
                     name="password_confirmation"
                     value={formData.passwordConfirmation}
                     onChange={handleChange}
                   />
-                  { errors.passwordConfirmation && <p className="help is-danger">{errors.passwordConfirmation.message}</p> }
                 </div>
                 <div className="field">
                 </div>
-                <button onClick={handleRegisterConfirmation} type="submit" value="Registration successful!" className="ui inverted icon right labeled button"><i aria-hidden="true" className="check right icon"></i> Sign me up!</button><br/>
+                <button onClick={handleRegisterConfirmation} type="submit" value="Registration successful!" className="ui icon right labeled button"><i aria-hidden="true" className="check right icon"></i> Sign me up!</button><br/>
                 <span className="registerConfirmBox"><p>{confirmMessage}</p></span>
               </form>
             </div>

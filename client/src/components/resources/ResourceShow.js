@@ -20,7 +20,6 @@ const ResourceShow = ({ userData }) => {
   console.log('RESOURCE', resource)
   if (!resource) return ''
 
-  // const { }
 
   return (
     <>
@@ -34,10 +33,10 @@ const ResourceShow = ({ userData }) => {
               // <div className="vid-detail">
               <div className="embedded-vid">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/9LmdUz3rOQU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-  
+                <h3>Pointing and calling is a safety standard that started with Japanese train operators but now is widely used in industry. The idea is that whenever you confirm something, you not only look at it, but also point at it and call out your observation.</h3>
               </div>
               : 
-              <div className="embedded-vid-pixar">
+              <div className="embedded-vid">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/k2h2lvhzMDc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 <h3>Ed Catmull, cofounder of Pixar, on how they make great movies: <br />
 

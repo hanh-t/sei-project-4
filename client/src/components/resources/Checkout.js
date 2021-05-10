@@ -17,7 +17,7 @@ const Checkout = () => {
     }
     getData()
   }, [])
-  console.log('RESOURCE>>>>', resource)
+  // console.log('RESOURCE>>>>', resource)
 
   useEffect(() => {
     const getData = async () => {
@@ -27,12 +27,13 @@ const Checkout = () => {
     getData()
   }, [])
 
-  console.log('USER', userData)
-
+  // console.log('USER', userData)
+  if (!resource || !userData) return null
   return (
     <>
       
       <h1 className="headers">CHECKOUT</h1>
+      <h2 className="headers">{resource.title}</h2>
       <div className="checkout-form-container">
         <div className="checkout-form"> 
           <div className="details"> 
@@ -46,7 +47,7 @@ const Checkout = () => {
 
                 <div className="field">
                   <label>Email</label>
-                  <input placeholder="email@email.com" />
+                  <input placeholder={userData.email} />
                 </div>
 
                 <div className="field">
@@ -66,13 +67,7 @@ const Checkout = () => {
 
           <div className="payment"> 
             <h2>PAYMENT DETAILS</h2>
-            {/* <h3>Accepted Cards</h3>
-          <div className="icon-container">
-            <i className="cc mastercard" /> */}
-            {/* <i className="fa fa-cc-amex" ></i>
-            <i className="fa fa-cc-mastercard" ></i>
-            <i className="fa fa-cc-discover" ></i> */} 
-            {/* </div> */}
+
             <form className="ui form">
               <div className="ui two column">
                 <div className="field">
@@ -101,7 +96,7 @@ const Checkout = () => {
         </div>
 
         <div className="buy-btn">
-          <Link to={`/auth/profile/${userID()}/orders/`}>
+          <Link to={`/resources/${params.id}/orders`}>
             <button className="ui inverted basic icon right labeled button"><i aria-hidden="true" className="shopping bag icon"></i>BUY</button>
           </Link>
         </div>

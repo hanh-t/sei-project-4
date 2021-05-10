@@ -37,8 +37,8 @@ const UserProfile = () => {
 
   const randomQuote = mappedQuotes[Math.floor(Math.random() * mappedQuotes.length)]
 
-  console.log('DATA1', userData)
-  console.log('DATA2', resources)
+  // console.log('DATA1', userData)
+  // console.log('DATA2', resources)
 
 
   const { username, fullName, email, points } = userData
@@ -46,7 +46,7 @@ const UserProfile = () => {
   const filteredResources = resources.filter(item => {
     return item.id === parseInt(userData.wishlist)
   }) 
-  console.log('FILTERED>>>', filteredResources)
+  // console.log('FILTERED>>>', filteredResources)
 
   
 
@@ -80,11 +80,12 @@ const UserProfile = () => {
           ))}
           {/* <p>{wishlist}</p> */}
         </div>
-
+        {/* 
         <div className="order-info">
           <h2 className="headers">ORDERS</h2>
-          <h2 className="headers">Nothing to see here just yet. Check out the RESOURCES page ✌️ </h2>
-        </div>
+   
+          <h2 className="headers">Check out your orders from the orders page <Link to="/resources">RESOURCES</Link>  page ✌️ </h2>
+        </div> */}
 
       </div>
       

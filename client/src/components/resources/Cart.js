@@ -18,7 +18,7 @@ const Cart = () => {
     }
     getData()
   }, [])
-  console.log('RESOURCE', resource)
+  // console.log('RESOURCE', resource)
 
   const handleCancel = () => {
     history.push('/')
@@ -63,7 +63,7 @@ const Cart = () => {
         </div>
         <div className="subtotal">
           <ul>
-            <li className="totalRow"><span className="label"> Subtotal</span><span className="value"> 45 points</span></li>
+            <li className="totalRow"><span className="label"> Subtotal</span><span className="value"> {resource.price} points</span></li>
       
             <li className="totalRow"><span className="label"> Shipping</span><span className="value"> £5.00</span></li>
       

@@ -13,7 +13,6 @@ const ResourceCard = ({ id, resourceType, title }) => {
           <div className="content">
             <div className="description">
               <h5>{title}</h5>
-              {/* <h5>{url}</h5> */}
             </div>
           </div>
         </div>
